@@ -1,22 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://imi.go.jp/ns/core/2" version="2.3.2" xmlns:ic="http://imi.go.jp/ns/core/2" xmlns:uncefactISO4217="urn:un:unece:uncefact:codelist:standard:ISO:ISO3AlphaCurrencyCode:2012-08-31">
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:foaf="http://xmlns.com/foaf/0.1/"
+            xmlns:dct="http://purl.org/dc/terms/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://imi.go.jp/ns/core/2"
+            version="2.4" xmlns:ic="http://imi.go.jp/ns/core/2"
+            xmlns:uncefactISO4217="urn:un:unece:uncefact:codelist:standard:ISO:ISO3AlphaCurrencyCode:2012-08-31">
+
+
   <xsd:annotation>
-    <xsd:documentation xml:lang="en">IMI Core Vocabulary</xsd:documentation>
     <xsd:documentation xml:lang="ja">コア語彙は、共通語彙基盤の基礎をなすもので、氏名、住所、組織等、あらゆる社会活動で使用される中核的な用語の集合です。多くのシステム間で情報交換のための基礎となる語彙で、データ交換、オープンデータの二次利用等の効率化に役立つものです。</xsd:documentation>
+    <xsd:documentation xml:lang="en">IMI Core Vocabulary</xsd:documentation>
     <xsd:appinfo>
-      <dct:title xml:lang="en">IMI Core Vocabulary</dct:title>
       <dct:title xml:lang="ja">共通語彙基盤コア語彙</dct:title>
+      <dct:title xml:lang="en">IMI Core Vocabulary</dct:title>
       <dct:license>http://creativecommons.org/publicdomain/zero/1.0/</dct:license>
-      <cc:license>http://creativecommons.org/publicdomain/zero/1.0/</cc:license>
-      <dct:issued>2016-11-18</dct:issued>
+      <dct:issued>2017-04-21</dct:issued>
       <dct:creator>
-        <foaf:name xml:lang="en">Ministry of Economy, Trade and Industry</foaf:name>
         <foaf:name xml:lang="ja">経済産業省</foaf:name>
+        <foaf:name xml:lang="en">Ministry of Economy, Trade and Industry</foaf:name>
         <foaf:homepage>http://www.meti.go.jp/</foaf:homepage>
       </dct:creator>
       <dct:creator>
-        <foaf:name xml:lang="en">Information-technology Promotion Agency, Japan.</foaf:name>
         <foaf:name xml:lang="ja">IPA 独立行政法人情報処理推進機構</foaf:name>
+        <foaf:name xml:lang="en">Information-technology Promotion Agency, Japan.</foaf:name>
         <foaf:homepage>http://www.ipa.go.jp/</foaf:homepage>
       </dct:creator>
     </xsd:appinfo>
@@ -25,6 +31,7 @@
   <xsd:complexType name="人型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">人の情報を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express information of a person.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:実体型">
@@ -36,7 +43,6 @@
   </xsd:complexType>
   <xsd:group name="人型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:氏名" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:性別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:性別コード" minOccurs="0" maxOccurs="1"/>
@@ -50,11 +56,15 @@
       <xsd:element ref="ic:出生国" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:出生国コード" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:出生地" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="ic:年齢" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="ic:身長" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="ic:体重" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="名称型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">組織や地物等の名称を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express names of an organization or feature.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -67,7 +77,6 @@
   <xsd:group name="名称型-固有要素グループ">
     <xsd:sequence>
       <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:表記" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:カナ表記" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:ローマ字表記" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
@@ -75,6 +84,7 @@
   <xsd:complexType name="氏名型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">人の氏名を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express the name of a person.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -104,6 +114,7 @@
   <xsd:complexType name="住所型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">住所を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an address.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -115,9 +126,7 @@
   </xsd:complexType>
   <xsd:group name="住所型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:表記" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:郵便番号" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:住所コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:国" minOccurs="0" maxOccurs="1"/>
@@ -141,6 +150,7 @@
   <xsd:complexType name="連絡先型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">連絡先を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a contact.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -152,7 +162,6 @@
   </xsd:complexType>
   <xsd:group name="連絡先型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:組織" minOccurs="0" maxOccurs="unbounded"/>
@@ -172,6 +181,7 @@
   <xsd:complexType name="電話番号型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">電話番号を表現するためのクラス用語 ※0-9 の数字及び + - ( ) , の文字のみを使用</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a telephone number. Note: Use '0 to 9' numeric characters and 'plus '+', minus '-', opening parenthesis '(', closing parenthesis ')', and comma ',' 'characters only.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="xsd:string">
@@ -183,6 +193,7 @@
   <xsd:complexType name="組織型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">組織を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an organization.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:実体型">
@@ -194,7 +205,6 @@
   </xsd:complexType>
   <xsd:group name="組織型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:略称アルファベット" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:通称" minOccurs="0" maxOccurs="unbounded"/>
@@ -214,6 +224,7 @@
   <xsd:complexType name="業務組織型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">業務組織を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a business organization.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:組織型">
@@ -233,6 +244,7 @@
   <xsd:complexType name="法人型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">法人を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a corporation.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:業務組織型">
@@ -252,9 +264,10 @@
   <xsd:complexType name="人数型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">人数を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express the number of people involved.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:人数型-固有要素グループ"/>
         </xsd:sequence>
@@ -270,9 +283,10 @@
   <xsd:complexType name="構成員型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">組織等を構成する人を表現するクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express members comprising an organization.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:構成員型-固有要素グループ"/>
         </xsd:sequence>
@@ -288,9 +302,10 @@
   <xsd:complexType name="組織関連型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">組織の関連を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an association with another organization.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:組織関連型-固有要素グループ"/>
         </xsd:sequence>
@@ -306,6 +321,7 @@
   <xsd:complexType name="場所型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">場所を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a location.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -327,6 +343,7 @@
   <xsd:complexType name="座標型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">座標を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express latitude-longitude coordinates.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -350,9 +367,10 @@
   <xsd:complexType name="ID型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">IDを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an identifier.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:ID型-固有要素グループ"/>
         </xsd:sequence>
@@ -363,11 +381,13 @@
     <xsd:sequence>
       <xsd:element ref="ic:体系" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:識別値" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="ic:参照" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="ID体系型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">IDの体系を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a system for specifying identifiers.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -380,14 +400,14 @@
   <xsd:group name="ID体系型-固有要素グループ">
     <xsd:sequence>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:発行者" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="ic:発行者" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:バージョン" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:URI" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="製品型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">製品を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a product.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -399,13 +419,11 @@
   </xsd:complexType>
   <xsd:group name="製品型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:自動認識ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:価格" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:使用方法" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:製造者" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:製造者ID" minOccurs="0" maxOccurs="unbounded"/>
@@ -427,6 +445,7 @@
   <xsd:complexType name="製品個品型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">製品を個別に表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an individual product.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:製品型">
@@ -452,6 +471,7 @@
   <xsd:complexType name="地物型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">参照対象となる地物（施設や建物など）を表すためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a feature (such as a facility or building) to be referenced.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:場所型">
@@ -463,12 +483,8 @@
   </xsd:complexType>
   <xsd:group name="地物型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:要約" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:アクセス" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:参照" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:画像" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:連絡先" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:設備" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:関与" minOccurs="0" maxOccurs="unbounded"/>
@@ -477,6 +493,7 @@
   <xsd:complexType name="土地型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">特定の用途に用いられる土地を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a plot of land used for a specific purpose.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:地物型">
@@ -496,6 +513,7 @@
   <xsd:complexType name="施設型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">施設を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a facility.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:地物型">
@@ -521,9 +539,10 @@
   <xsd:complexType name="施設関連型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">施設の関連を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an associated facility.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:施設関連型-固有要素グループ"/>
         </xsd:sequence>
@@ -539,6 +558,7 @@
   <xsd:complexType name="建物型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">建物を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a building.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:地物型">
@@ -565,6 +585,7 @@
   <xsd:complexType name="駐車場型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">駐車場を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a parking area.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:施設型">
@@ -583,6 +604,7 @@
   <xsd:complexType name="設備型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">施設や建物等に備わっている設備を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an equipment installed in a facility or building.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -594,17 +616,14 @@
   </xsd:complexType>
   <xsd:group name="設備型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:設置地点" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:設置位置" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:利用可能時間" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:料金" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:外部利用可否" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:利用者" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:設置日" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:画像" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:Webサイト" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:設置者" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:管理者" minOccurs="0" maxOccurs="1"/>
@@ -616,6 +635,7 @@
   <xsd:complexType name="イベント型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">時間と場所を指定して行われるイベント（ビジネス、スポーツ、教育、娯楽などの催し）を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an event (such as a business, sport, educational, or entertaining activity) which is held at the specified time and location.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -627,7 +647,6 @@
   </xsd:complexType>
   <xsd:group name="イベント型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:関連組織" minOccurs="0" maxOccurs="unbounded"/>
@@ -635,18 +654,18 @@
       <xsd:element ref="ic:期間" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:参加方法" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:連絡先" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:要約" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:関連イベント" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:対象者" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:人数" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:キーワード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:料金" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:利用対象" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="活動型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">活動を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an activity.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -658,22 +677,21 @@
   </xsd:complexType>
   <xsd:group name="活動型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:関与" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:場所" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:日時" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:期間" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="関与型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">関連する組織や人を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an associated organization or person.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:関与型-固有要素グループ"/>
         </xsd:sequence>
@@ -690,9 +708,10 @@
   <xsd:complexType name="数量型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">数量を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express quantity.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:数量型-固有要素グループ"/>
         </xsd:sequence>
@@ -709,9 +728,10 @@
   <xsd:complexType name="容量型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">容量を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express volume.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:容量型-固有要素グループ"/>
         </xsd:sequence>
@@ -728,9 +748,10 @@
   <xsd:complexType name="面積型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">面積を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express area.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:面積型-固有要素グループ"/>
         </xsd:sequence>
@@ -747,9 +768,10 @@
   <xsd:complexType name="重量型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">重量を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express weight.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:重量型-固有要素グループ"/>
         </xsd:sequence>
@@ -766,9 +788,10 @@
   <xsd:complexType name="長さ型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">長さを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express length.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:長さ型-固有要素グループ"/>
         </xsd:sequence>
@@ -785,9 +808,10 @@
   <xsd:complexType name="金額型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">金額を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express amount of money.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:金額型-固有要素グループ"/>
         </xsd:sequence>
@@ -805,6 +829,7 @@
   <xsd:complexType name="価格型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">価格を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a price.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -823,17 +848,20 @@
   <xsd:complexType name="実体型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">実体を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an entity.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型"/>
+      <xsd:extension base="ic:事物型">
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="状況型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">状況を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express state of affairs.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:状況型-固有要素グループ"/>
         </xsd:sequence>
@@ -852,9 +880,10 @@
   <xsd:complexType name="日時型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">日時を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express date and time.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:日時型-固有要素グループ"/>
         </xsd:sequence>
@@ -879,9 +908,10 @@
   <xsd:complexType name="日付型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">日付を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express date.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:日付型-固有要素グループ"/>
         </xsd:sequence>
@@ -903,6 +933,7 @@
   <xsd:complexType name="期間型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">期間を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a period.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:期間スケジュール型">
@@ -922,14 +953,17 @@
   <xsd:complexType name="期間スケジュール型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">期間やスケジュールを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a period or schedule.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型"/>
+      <xsd:extension base="ic:概念型">
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="イベントスケジュール型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">イベントスケジュールを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an event schedule.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:期間スケジュール型">
@@ -952,6 +986,7 @@
   <xsd:complexType name="定期スケジュール型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">定期的に繰り返されるスケジュールを表現するクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a schedule that is repeatedly held on a regular basis.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:期間スケジュール型">
@@ -974,28 +1009,31 @@
   </xsd:group>
   <xsd:complexType name="詳細スケジュール型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">（将来的に整備する予定）
-施設等のオープン日とオープン時間を表現するためのクラス用語。複数のスケジュールが列挙された場合はそれらの和を取るものとする</xsd:documentation>
+      <xsd:documentation xml:lang="ja">（将来的に整備する予定）施設等のオープン日とオープン時間を表現するためのクラス用語。複数のスケジュールが列挙された場合はそれらの和を取るものとする</xsd:documentation>
+      <xsd:documentation xml:lang="en">(To be defined in the future)A class term to express opening time and day of a facility. When multiple schedules are listed, enumerate them.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:期間スケジュール型"/>
+      <xsd:extension base="ic:期間スケジュール型">
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="詳細スケジュール規則型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">（将来的に整備する予定）
-繰り返し型のスケジュールを定義するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">（将来的に整備する予定）繰り返し型のスケジュールを定義するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">(To be defined in the future) class term to define a repetitive schedule.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:期間スケジュール型"/>
+      <xsd:extension base="ic:期間スケジュール型">
+      </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="コード型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">コードを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a code.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:コード型-固有要素グループ"/>
         </xsd:sequence>
@@ -1010,11 +1048,13 @@
       <xsd:element ref="ic:上位コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:下位コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:関連コード" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:参照" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="単位コード型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">単位コードを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a unit code.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:コード型">
@@ -1033,6 +1073,7 @@
   <xsd:complexType name="コードリスト型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">コードリストを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a code list.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ic:事物型">
@@ -1045,17 +1086,17 @@
   <xsd:group name="コードリスト型-固有要素グループ">
     <xsd:sequence>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:発行者" minOccurs="0" maxOccurs="1"/>
+      <xsd:element ref="ic:発行者" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:バージョン" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:URI" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="アクセス型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">地物等へのアクセスを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a route to a feature, etc.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:アクセス型-固有要素グループ"/>
         </xsd:sequence>
@@ -1079,9 +1120,10 @@
   <xsd:complexType name="アクセス区間型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">アクセスに含まれる各区間を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express each section of a route.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="ic:事物型">
+      <xsd:extension base="ic:概念型">
         <xsd:sequence>
           <xsd:group ref="ic:アクセス区間型-固有要素グループ"/>
         </xsd:sequence>
@@ -1099,152 +1141,1217 @@
       <xsd:element ref="ic:時間" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:group>
-  <xsd:complexType name="事物型">
+  <xsd:complexType name="概念型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">全ての型のベースとなる基本型としてのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term that serves as the base type for all types.</xsd:documentation>
     </xsd:annotation>
     <xsd:attribute name="id" type="xsd:ID"/>
     <xsd:attribute name="ref" type="xsd:IDREF"/>
   </xsd:complexType>
-  <!--プロパティに対応する要素-->
+  <xsd:complexType name="事物型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">識別可能なことやものを表すためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to represent an identifiable thing.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:概念型">
+        <xsd:sequence>
+          <xsd:group ref="ic:事物型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="事物型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:表記" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:参照" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:画像" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="参照型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">追加情報等を参照するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to refer to additional information.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:概念型">
+        <xsd:sequence>
+          <xsd:group ref="ic:参照型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="参照型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:参照先" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="サービス型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">サービスの情報を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a service.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:事物型">
+        <xsd:sequence>
+          <xsd:group ref="ic:サービス型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="サービス型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:利用対象" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:提供者" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:利用方法" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="文書型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書の情報を表すクラス用語（Dublin Core Metadata Element Setに準拠）</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express information of a document (that complies with Dublin Core Metadata Element Set).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:事物型">
+        <xsd:sequence>
+          <xsd:group ref="ic:文書型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="文書型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:表題" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:作成者" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:キーワード" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:発行者" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:寄与者" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:日付" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:資源タイプ" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:記録形式" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:記録形式コード" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:出処" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:言語" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:権利管理" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="対象型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">イベントや制度等の対象となる事物を表すクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a thing to be targeted for an event or system.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:事物型">
+        <xsd:sequence>
+          <xsd:group ref="ic:対象型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="対象型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:制約" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="制約型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約条件を表すクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a restriction on a thing to be targeted.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:概念型">
+        <xsd:sequence>
+          <xsd:group ref="ic:制約型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="制約型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:制約対象" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="コード制約型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約条件をコードによって指定するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a restriction on a targeted thing as a code.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:制約型">
+        <xsd:sequence>
+          <xsd:group ref="ic:コード制約型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="コード制約型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:制約コード" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="範囲制約型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約条件を数量の範囲によって指定するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a restriction on a targeted thing by means of a numerical range.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:制約型">
+        <xsd:sequence>
+          <xsd:group ref="ic:範囲制約型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="範囲制約型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:上限値" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:境界を含まない上限値" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:下限値" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:境界を含まない下限値" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="期間制約型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約条件を期間によって指定するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a restriction on a targeted thing by means of a period.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:制約型">
+        <xsd:sequence>
+          <xsd:group ref="ic:期間制約型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="期間制約型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:期間" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+
+  
+  <xsd:element name="体系" type="ic:ID体系型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">IDの体系を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The system for specifying identifiers.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:element name="ID" type="ic:ID型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">事物に割り振られたID（識別子)を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The identifier assigned to a thing.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="氏名" type="ic:氏名型" nillable="true">
+  <xsd:element name="座標参照系" type="ic:ID型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">人の氏名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">座標の参照系を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The reference system of latitude-longitude coordinates.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="性別" type="ic:性別-単純型">
+  <xsd:element name="シリアル番号" type="ic:ID型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">性別の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">シリアル番号を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The serial number.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="性別-単純型">
+  <xsd:element name="製造者ID" type="ic:ID型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">製造者によって割り当てられたIDを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The identifier assigned by a manufacturer.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="地理識別子" type="ic:ID型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">場所の地理識別子を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The geographical identifier of a location.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="販売業者ID" type="ic:ID型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">販売業者によって割り当てられたIDを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The identifier assigned by a distributor.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="アクセス区間" type="ic:アクセス区間型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">アクセス方法の各区間の一覧を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The list of sections of a route.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="アクセス" type="ic:アクセス型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">アクセス方法を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The route.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="関連イベント" type="ic:イベント型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">関連するイベントを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The related event.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="料金" type="ic:価格型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">料金（施設、設備の利用料金やイベントの参加費など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The fee (such as a usage fee of a facility or equipment, and a participation fee of an event).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="価格" type="ic:価格型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">価格（製品の価格など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The price (such as a product price).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="金額" type="ic:金額型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">金額を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The amount of money.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="資本金" type="ic:金額型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">法人などの資本金を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The capital of a corporation.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="購入価格" type="ic:金額型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">購入価格を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The purchase price.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="代表者" type="ic:構成員型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">組織の代表者を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The representative of an organization.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="座標データ書式" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">点、線、面などを表現するデータ文字列の書式を表すコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a format of a data string to express points, lines, and planes.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="カレンダー" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">カレンダーの種類を表すコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a type of calendar.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="国コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">国のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a country.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="市区町村コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">市区町村のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a municipality.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="住所コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">住所のコードを記述するためのプロパティ用語　※地方公共団体情報システム機構の地方公共団体コード住所など</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying an address. Note: Such as Local Government Code Address by Japan Agency for Local Authority Information Systems.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="都道府県コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">都道府県のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a prefecture.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="コード種別" type="ic:コードリスト型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">コードの種別を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The type of a code.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="量種別" type="ic:量種別-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">量の種別の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The category of a quantity expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="量種別-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
+  <xsd:element name="乗数" type="ic:乗数-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">基本単位に対する変換乗数を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The conversion multiplier to be applied to the base unit.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="乗数-単純型">
+    <xsd:restriction base="xsd:double"/>
+  </xsd:simpleType>
+  <xsd:element name="原産国コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">原産国を表すコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a country of origin.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="国籍コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">国籍コードを記述するためのプロパティ用語　※住民基本台帳で利用されているものを使用</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a nationality. Note: Use the code in Basic Resident Registration.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="種別コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">種別コードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a category.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:element name="性別コード" type="ic:コード型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">性別コードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying gender.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="生年月日" type="ic:日付型" nillable="true">
+  <xsd:element name="出生国コード" type="ic:コード型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">生年月日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">生まれた国のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a country of birth.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="組織種別" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">組織の種別コード（株式会社など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying the category of an organization (such as a limited corporation).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="施設" type="ic:施設型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">施設を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The facility.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="関連施設" type="ic:施設関連型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">関連する施設（上位施設、下位施設など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The associated facility (such as a parent or affiliated facility).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="管理者" type="ic:実体型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">管理している組織や人を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The organization or person in charge of maintenance.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="入数" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">箱などに含まれる物の数量を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The quantity of items contained in a box, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="収容人数" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">収容人数を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The maximum number of people that a facility can accommodate.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="期間" type="ic:期間スケジュール型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">開始から終了までの時間範囲を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The time range from start to end.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="利用可能時間" type="ic:期間スケジュール型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">利用可能日と利用可能時間を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The available date (or day) and opening hours.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="設備" type="ic:設備型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">設備を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The equipment.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="時間" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">所要時間を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The amount of time required.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="設置者" type="ic:組織型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">設備などを設置した組織を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The organization that installed an equipment, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="組織" type="ic:組織型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">組織を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The organization.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="関連組織" type="ic:組織関連型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">関連する組織を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The associated organization.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="代理人" type="ic:組織関連型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">法定手続きなどの代理人となる組織を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The organization that acts as agent for legal procedures.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="建物" type="ic:建物型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">建物を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The building.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="駐車場" type="ic:駐車場型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">駐車場を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The parking area.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="FAX番号" type="ic:電話番号型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">FAX番号を記述するためのプロパティ用語　※0-9 の数字及び + - ( ) , の文字のみを使用</xsd:documentation>
+      <xsd:documentation xml:lang="en">The facsimile number. Note: Use '0 to 9' numeric characters and 'plus '+', minus '-', opening parenthesis '(', closing parenthesis ')', and comma ',' 'characters only.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="携帯電話番号" type="ic:電話番号型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">携帯電話番号を記述するためのプロパティ用語　※0-9 の数字及び + - ( ) , の文字のみを使用</xsd:documentation>
+      <xsd:documentation xml:lang="en">The cellular phone number. Note: Use '0 to 9' numeric characters and 'plus '+', minus '-', opening parenthesis '(', closing parenthesis ')', and comma ',' 'characters only.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="電話番号" type="ic:電話番号型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">電話番号を記述するためのプロパティ用語　※0-9 の数字及び + - ( ) , の文字のみを使用</xsd:documentation>
+      <xsd:documentation xml:lang="en">The telephone number. Note: Use '0 to 9' numeric characters and 'plus '+', minus '-', opening parenthesis '(', closing parenthesis ')', and comma ',' 'characters only.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="有効開始日時" type="ic:日時型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">スケジュールが有効になる日時を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date and time when a schedule becomes effective.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="有効終了日時" type="ic:日時型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">スケジュールが無効になる日時を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date and time when a schedule becomes ineffective.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="開始日時" type="ic:日時型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">期間の開始日時を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The start date and time of a period.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="終了日時" type="ic:日時型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">期間の終了日時を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The end date and time of a period.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="消費期限" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">消費期限を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The expiration date by which a product should be consumed.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="製造日" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">製造日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date of manufacture.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="死亡年月日" type="ic:日付型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">死亡年月日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date of death.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="住所" type="ic:住所型" nillable="true">
+  <xsd:element name="竣工日" type="ic:日付型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">住所を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">建物の竣工日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The completion date of a building.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="本籍" type="ic:住所型" nillable="true">
+  <xsd:element name="生年月日" type="ic:日付型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">本籍を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">生年月日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date of birth.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="構成員" type="ic:人型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">構成員を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The member.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="名称" type="ic:名称型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">名称を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="延べ面積" type="ic:面積型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">建物の延べ床面積を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The total floor area of a building.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="建築面積" type="ic:面積型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">建築面積を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The building area.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="敷地面積" type="ic:面積型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">敷地面積を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The ground area.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="連絡先" type="ic:連絡先型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">連絡先を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The contact.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="国籍" type="ic:国籍-単純型">
+  <xsd:element name="地理座標" type="ic:座標型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">国籍の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">場所の経緯度座標を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The latitude-longitude coordinates of a location.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="国籍-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="国籍コード" type="ic:コード型" nillable="true">
+  <xsd:element name="氏名" type="ic:氏名型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">国籍コードを記述するためのプロパティ用語　※住民基本台帳で利用されているものを使用</xsd:documentation>
+      <xsd:documentation xml:lang="ja">人の氏名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a person.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="出生国" type="ic:出生国-単純型">
+  <xsd:element name="担当者名" type="ic:氏名型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">生まれた国名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">担当者の氏名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a contact person.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="出生国-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="出生国コード" type="ic:コード型" nillable="true">
+  <xsd:element name="関与" type="ic:関与型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">生まれた国のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">関連する組織や人（関連性の記述を含む）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The associated organization or person (including a description of the relationship).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="所有者" type="ic:実体型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">所有者を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The owner.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="住所" type="ic:住所型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">住所を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The address.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="本籍" type="ic:住所型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">本籍を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The registered domicile by birth.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="重量" type="ic:重量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">重量を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The weight.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="場所" type="ic:場所型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">場所を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The location.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="出生地" type="ic:住所型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">生まれた場所を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The birth place.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="種別" type="ic:種別-単純型">
+  <xsd:element name="活動状況" type="ic:状況型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">様々な事物の種別の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">組織などの活動状況を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The activity status of an organization, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="種別-単純型">
+  <xsd:element name="開催場所" type="ic:地物型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">イベントなどの開催場所を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The venue of a event, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="地物" type="ic:地物型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">関連する地物（施設、建物、土地など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The associated feature (such as a facility, building, or land).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="始点" type="ic:地物型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">始点となる地物を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The feature that serves as an origin.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="終点" type="ic:地物型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">終点となる地物を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The feature that serves as a destination.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="設置地点" type="ic:地物型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">設備などが設置されている地物（施設や建物など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The feature in which an equipment is installed. (Such as a facility or building.)</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="測地高度" type="ic:長さ型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">測地高度を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The geodetic height.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="高さ" type="ic:長さ型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">形状の高さを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The height of the shape.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="長さ" type="ic:長さ型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">形状の長さを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The length of the shape.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="幅" type="ic:長さ型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">形状の幅を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The width of the shape.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="最高の高さ" type="ic:長さ型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">最高点の高さを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The height at the highest point.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="発生日" type="ic:日時型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">状況などの発生日時を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date and time of occurrence of state of affairs, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="開催日" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">イベントなどが開催される日付を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date on which an event, etc. is held.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="開始日" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">イベントなどの開始日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The starting date of an event, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="事業年度開始日" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">事業年度の開始日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The start date of the business year.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="終了日" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">イベントなどの終了日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The closing date of the event, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="使用期限" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">使用期限を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The expiration date by which a product should be used.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="賞味期限" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">賞味期限を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The best-before-date of a product.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="設置日" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">設備などの設置日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The installation date of an equipment, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="設立日" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">組織などの設立日を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date of establishment of an organization, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="通貨コード" type="uncefactISO4217:ISO3AlphaCurrencyCodeContentType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">通貨コードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a currency.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="単位" type="ic:単位コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">計測値の単位を表すコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a unit of measured values.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="単位表記" type="ic:単位表記-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">単位の文字列による表現を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The unit expressed as a string.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="単位表記-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="表記" type="ic:表記-単純型">
+  <xsd:element name="Webサイト" type="ic:Webサイト-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">文字列による表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">Webサイトを参照するURLを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The URL that references a Web site.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="表記-単純型">
+  <xsd:simpleType name="Webサイト-単純型">
+    <xsd:restriction base="xsd:anyURI"/>
+  </xsd:simpleType>
+  <xsd:element name="画像" type="ic:画像-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">画像を参照するURLを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The URL that references an image.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="画像-単純型">
+    <xsd:restriction base="xsd:anyURI"/>
+  </xsd:simpleType>
+  <xsd:element name="参照" type="ic:参照型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">追加情報などを参照するURLを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The URL that references additional information.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="自動認識ID" type="ic:自動認識ID-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">自動認識ID（バーコードや二次元コードの画像など）が表すURLを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The URL expressed by the automatic recognition identifier (such as an image of bar code and two-dimensional code).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="自動認識ID-単純型">
+    <xsd:restriction base="xsd:anyURI"/>
+  </xsd:simpleType>
+  <xsd:element name="地図" type="ic:地図-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">地図を参照するURLを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The URL that references a map.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="地図-単純型">
+    <xsd:restriction base="xsd:anyURI"/>
+  </xsd:simpleType>
+  <xsd:element name="標準型日付" type="ic:標準型日付-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日付を記述するためのプロパティ用語　※XMLのxsd:date型に準拠したもの</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date. Note: This shall comply with xsd:date type of XML.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="標準型日付-単純型">
+    <xsd:restriction base="xsd:date"/>
+  </xsd:simpleType>
+  <xsd:element name="標準型日時" type="ic:標準型日時-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日時を記述するためのプロパティ用語　※XMLのxsd:dateTime型に準拠したもの</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date and time. Note: This shall comply with xsd:date type of XML.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="標準型日時-単純型">
+    <xsd:restriction base="xsd:dateTime"/>
+  </xsd:simpleType>
+  <xsd:element name="数値" type="ic:数値-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">数値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The numerical value.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="数値-単純型">
+    <xsd:restriction base="xsd:decimal"/>
+  </xsd:simpleType>
+  <xsd:element name="地下階数" type="ic:地下階数-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">建物の地下階数を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The number of underground floors of a building.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="地下階数-単純型">
+    <xsd:restriction base="xsd:decimal"/>
+  </xsd:simpleType>
+  <xsd:element name="地上階数" type="ic:地上階数-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">建物の地上階数を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The number of aboveground floors of a building.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="地上階数-単純型">
+    <xsd:restriction base="xsd:decimal"/>
+  </xsd:simpleType>
+  <xsd:element name="秒" type="ic:秒-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日時などの秒の値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The value of second in date and time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="秒-単純型">
+    <xsd:restriction base="xsd:decimal"/>
+  </xsd:simpleType>
+  <xsd:element name="月" type="ic:月-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日付や日時などの月の値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The value of month in date, and date and time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="月-単純型">
+    <xsd:restriction base="xsd:integer"/>
+  </xsd:simpleType>
+  <xsd:element name="時" type="ic:時-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日時などの時の値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The value of time in date and time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="時-単純型">
+    <xsd:restriction base="xsd:integer"/>
+  </xsd:simpleType>
+  <xsd:element name="収容台数" type="ic:収容台数-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">駐車場の収容可能台数を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The maximum number of vehicles that a parking area can accommodate.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="収容台数-単純型">
+    <xsd:restriction base="xsd:integer"/>
+  </xsd:simpleType>
+  <xsd:element name="年" type="ic:年-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日付や日時などの年の値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The value of year in date, and date and time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="年-単純型">
+    <xsd:restriction base="xsd:integer"/>
+  </xsd:simpleType>
+  <xsd:element name="日" type="ic:日-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日付や日時などの日の値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The value of day in date, and date and time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="日-単純型">
+    <xsd:restriction base="xsd:integer"/>
+  </xsd:simpleType>
+  <xsd:element name="分" type="ic:分-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日時などの分の値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The value of minute in date and time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="分-単純型">
+    <xsd:restriction base="xsd:integer"/>
+  </xsd:simpleType>
+  <xsd:element name="人数" type="ic:人数-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">人数を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The number of people.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="人数-単純型">
+    <xsd:restriction base="xsd:nonNegativeInteger"/>
+  </xsd:simpleType>
+  <xsd:element name="Eメールアドレス" type="ic:Eメールアドレス-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">電子メールアドレスを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The electronic mail address.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="Eメールアドレス-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="緯度" type="ic:緯度-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">緯度を記述するためのプロパティ用語　※-90から+90で記載</xsd:documentation>
+      <xsd:documentation xml:lang="en">The latitude. Note: Specify a value between -90 and +90.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="緯度-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="緯度経度書式" type="ic:緯度経度書式-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">度、分、秒の書式を記述するためのプロパティ用語　※書式はiso6709に準拠する</xsd:documentation>
+      <xsd:documentation xml:lang="en">The format to express degree, minutes and seconds. Note: The format shall comply with ISO 6709 standard.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="緯度経度書式-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="色" type="ic:色-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">色の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The color expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="色-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="開催期日" type="ic:開催期日-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">スケジュールが有効となる日を記述するためのプロパティ用語　※スケジュールの種別が「週間」の場合は曜日、「月間」の場合は月の中の日、「年間」の場合は年の中の月日を指定する。</xsd:documentation>
+      <xsd:documentation xml:lang="en">The day on which the schedule becomes effective. Note: If the schedule category is 'weekly', then select a day of the week. If it is 'monthly' or 'yearly', then select a date in the month or the year respectively.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="開催期日-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="外部利用可否" type="ic:外部利用可否-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">施設や設備などの外部利用可否の記述のためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual description of whether or not a facility or equipment is available for use by outsiders.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="外部利用可否-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="概要" type="ic:概要-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">概要説明を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The overview description.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="概要-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
   <xsd:element name="カナ表記" type="ic:カナ表記-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">カタカナ表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression in Katakana.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="カナ表記-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="ローマ字表記" type="ic:ローマ字表記-単純型">
+  <xsd:element name="キーワード" type="ic:キーワード-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">ローマ字表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">キーワードの記述のためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The description of keywords.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="ローマ字表記-単純型">
+  <xsd:simpleType name="キーワード-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="姓名" type="ic:姓名-単純型">
+  <xsd:element name="規制情報" type="ic:規制情報-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">氏名（姓、名）の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">規制に関する情報（取り扱い上の注意など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The regulatory information (including handling precautions).</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="姓名-単純型">
+  <xsd:simpleType name="規制情報-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="姓名カナ表記" type="ic:姓名カナ表記-単純型">
+  <xsd:element name="区" type="ic:区-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">氏名（姓、名）のカタカナ表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">政令指定都市の区の名前を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a ward in a ordinance-designated city.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="姓名カナ表記-単純型">
+  <xsd:simpleType name="区-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="姓名ローマ字表記" type="ic:姓名ローマ字表記-単純型">
+  <xsd:element name="国" type="ic:国-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">氏名（姓、名）のローマ字表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">国名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The country name.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="姓名ローマ字表記-単純型">
+  <xsd:simpleType name="国-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="形態" type="ic:形態-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">製品などの形態の説明を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The description of the form of a product, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="形態-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="経度" type="ic:経度-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">経度を記述するためのプロパティ用語　※-180から+180で記載</xsd:documentation>
+      <xsd:documentation xml:lang="en">The longitude. Note: Specify a value between -180 and +180.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="経度-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="原産国" type="ic:原産国-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">原産国名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a country of origin.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="原産国-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="号" type="ic:号-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">号、住居番号の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The building number or house number expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="号-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="国籍" type="ic:国籍-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">国籍の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The nationality expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="国籍-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="サイズ" type="ic:サイズ-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">サイズの表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The size expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="サイズ-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="座標データ" type="ic:座標データ-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">点、線、面などを表現するデータ文字列の書式を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The format of a data string to express points, lines, and planes.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="座標データ-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="参加方法" type="ic:参加方法-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">イベントなどへの参加方法の説明を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The explanation on how to join an event, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="参加方法-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="時間帯" type="ic:時間帯-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">時間帯を記述するためのプロパティ用語　※協定世界時からの時間差</xsd:documentation>
+      <xsd:documentation xml:lang="en">The time zone. Note: The time difference from the Coordinated Universal Time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="時間帯-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="識別値" type="xsd:string">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">IDやコードの値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The value of an identifier or code.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="事業種目" type="ic:事業種目-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">事業の種類の表記（販売業など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The category of a business (such as a distributor) expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="事業種目-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="市区町村" type="ic:市区町村-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">市区町村名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a municipality.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="市区町村-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="始点備考" type="ic:始点備考-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">始点についての備考を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The remarks on the origin.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="始点備考-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="終点備考" type="ic:終点備考-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">終点についての備考を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The remarks on the destination.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="終点備考-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="種別" type="ic:種別-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">様々な事物の種別の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The category of various things expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="種別-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="状態" type="ic:状態-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">状態を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The state.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="状態-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="使用方法" type="ic:使用方法-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">使用方法の説明を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The explanation of usage instructions.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="使用方法-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
   <xsd:element name="姓" type="ic:姓-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">氏名の姓の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The family name expressed as text.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="姓-単純型">
@@ -1253,30 +2360,184 @@
   <xsd:element name="姓カナ表記" type="ic:姓カナ表記-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">氏名の姓のカタカナ表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a family name in Katakana.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="姓カナ表記-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
+  <xsd:element name="製造者" type="ic:製造者-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">製造者名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a manufacturer.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="製造者-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="姓名" type="ic:姓名-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">氏名（姓、名）の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The full name (family and given name) expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="姓名-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="性別" type="ic:性別-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">性別の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The gender expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="性別-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="姓名カナ表記" type="ic:姓名カナ表記-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">氏名（姓、名）のカタカナ表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a full name (family and given name) in Katakana.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="姓名カナ表記-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="姓名ローマ字表記" type="ic:姓名ローマ字表記-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">氏名（姓、名）のローマ字表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a full name (family and given name) in the Roman alphabet.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="姓名ローマ字表記-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
   <xsd:element name="姓ローマ字表記" type="ic:姓ローマ字表記-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">氏名の姓のローマ字表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a family name in the Roman alphabet.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="姓ローマ字表記-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
+  <xsd:element name="設置位置" type="ic:設置位置-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">設備などの設置場所の表記（受付横など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The location of an equipment, etc. installed (such as beside a reception desk) expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="設置位置-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="説明" type="ic:説明-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">説明を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The description.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="説明-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="送付先" type="ic:送付先-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">郵便物送付先の住所（私書箱など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The mailing address (such as a private mail box).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="送付先-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="組織種別位置" type="ic:組織種別位置-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">組織名称中の組織種別の記載位置の表記（前、後、など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The position of the organization type description within an organization name (as a prefix or suffix, etc.) expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="組織種別位置-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="対応言語" type="ic:対応言語-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">連絡の際に利用可能な言語名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The language available when contacting.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="対応言語-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="関与者" type="ic:実体型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">関連する組織や人を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The associated organization or person.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="担当者役職" type="ic:担当者役職-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">担当者の役職の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The title of a person in charge expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="担当者役職-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="駐車場種別" type="ic:駐車場種別-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">駐車場の種別の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The category of a parking area expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="駐車場種別-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="丁目" type="ic:丁目-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">丁目の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The city district number expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="丁目-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="通称" type="ic:通称-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">正式な名称以外に一般的に使用されている名称を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The generally used name apart from its official name.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="通称-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="都道府県" type="ic:都道府県-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">都道府県名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a prefecture.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="都道府県-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
   <xsd:element name="名" type="ic:名-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">氏名の名の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The given name expressed as text.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="名-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
+  <xsd:element name="内線番号" type="ic:内線番号-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">電話の内線番号を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The extension number of a telephone number.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="内線番号-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
   <xsd:element name="名カナ表記" type="ic:名カナ表記-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">氏名の名のカタカナ表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a given name in Katakana.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="名カナ表記-単純型">
@@ -1285,14 +2546,106 @@
   <xsd:element name="名ローマ字表記" type="ic:名ローマ字表記-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">氏名の名のローマ字表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a given name in the Roman alphabet.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="名ローマ字表記-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
+  <xsd:element name="年号" type="ic:年号-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">日付や日時などの元号を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The Japanese era in date, and date and time.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="年号-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="バージョン" type="ic:バージョン-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">バージョン情報を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The version information.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="バージョン-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="バリアフリー" type="ic:バリアフリー-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">設備などのバリアフリーに関する情報の記述のためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The description of information regarding accessibility to an equipment, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="バリアフリー-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="番地" type="ic:番地-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">番、街区の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The block number or town block number expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="番地-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="番地補足" type="ic:番地補足-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">番地の前の、「東」「北」「浜」「甲」「イ」などの文字を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The prefix string such as '東 (East)' , '北 (North)',  '浜 (Coast)', '甲' and 'イ' (characters representing item number) specified prior to a block number.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="番地補足-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="販売業者" type="ic:販売業者-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">販売業者名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a distributor.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="販売業者-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="備考" type="ic:備考-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">備考を記述するためのプロパティ用語　※補足情報などがある場合に記述</xsd:documentation>
+      <xsd:documentation xml:lang="en">The remarks. Note: Specify when there is any additional information.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="備考-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="表記" type="ic:表記-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文字列による表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression using a text string.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="表記-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="ビル番号" type="ic:ビル番号-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">ビルの番号の表記（号棟など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The building number (such as unit number) expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ビル番号-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="ビル名" type="ic:ビル名-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">ビル名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The building name.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ビル名-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
   <xsd:element name="ミドルネーム" type="ic:ミドルネーム-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">ミドルネームの表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The middle name expressed as text.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="ミドルネーム-単純型">
@@ -1301,6 +2654,7 @@
   <xsd:element name="ミドルネームカナ表記" type="ic:ミドルネームカナ表記-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">ミドルネームのカタカナ表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a middle name in Katakana.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="ミドルネームカナ表記-単純型">
@@ -1309,130 +2663,145 @@
   <xsd:element name="ミドルネームローマ字表記" type="ic:ミドルネームローマ字表記-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">ミドルネームのローマ字表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression of a middle name in the Roman alphabet.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="ミドルネームローマ字表記-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
+  <xsd:element name="役割" type="ic:役割-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">人、組織、施設などの役割の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The role of a person, organization, or facility, etc. expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="役割-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="役割コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">人、組織、施設などの役割を表すコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a role of a person, organization, or facility, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:element name="郵便番号" type="ic:郵便番号-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">郵便番号を記述するためのプロパティ用語　※0-9の数字7桁</xsd:documentation>
+      <xsd:documentation xml:lang="en">The postal code. Note: A string consisting of seven numeric characters of '0 to 9'.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="郵便番号-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="住所コード" type="ic:コード型" nillable="true">
+  <xsd:element name="要約" type="ic:要約-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">住所のコードを記述するためのプロパティ用語　※地方公共団体情報システム機構の地方公共団体コード住所など</xsd:documentation>
+      <xsd:documentation xml:lang="ja">説明の要約を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The abstract of description.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="国" type="ic:国-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">国名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="国-単純型">
+  <xsd:simpleType name="要約-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="国コード" type="ic:コード型" nillable="true">
+  <xsd:element name="略称アルファベット" type="ic:略称アルファベット-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">国のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">頭文字などを使った略称表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The abbreviated expression using initial letters, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="都道府県" type="ic:都道府県-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">都道府県名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="都道府県-単純型">
+  <xsd:simpleType name="略称アルファベット-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="都道府県コード" type="ic:コード型" nillable="true">
+  <xsd:element name="利用者" type="ic:利用者-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">都道府県のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">利用者の条件を記述するためのプロパティ用語　※利用者に限定条件がある場合</xsd:documentation>
+      <xsd:documentation xml:lang="en">The condition of eligible users. Note: When limiting conditions are specified for users.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="市区町村" type="ic:市区町村-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">市区町村名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="市区町村-単純型">
+  <xsd:simpleType name="利用者-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="区" type="ic:区-単純型">
+  <xsd:element name="ローマ字表記" type="ic:ローマ字表記-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">政令指定都市の区の名前を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">ローマ字表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The textual expression in the Roman alphabet.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="区-単純型">
+  <xsd:simpleType name="ローマ字表記-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="市区町村コード" type="ic:コード型" nillable="true">
+  <xsd:element name="路線" type="ic:路線-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">市区町村のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">アクセス区間に用いる交通の路線（事業者及び路線名、バス系統など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The line of transportation used in an section of the route (such as a transport service provider, line name, and bus route).</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
+  <xsd:simpleType name="路線-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="ロット番号" type="ic:ロット番号-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">製造ロットの番号を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The manufacturing lot number.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="ロット番号-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="構造" type="ic:構造-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">建物などの構造の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The structure of a building, etc. expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="構造-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="主要用途" type="ic:主要用途-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">建物などの主要用途の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The major use of a building, etc. expressed as text.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="主要用途-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="出生国" type="ic:出生国-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">生まれた国名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a country of birth.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="出生国-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
   <xsd:element name="町名" type="ic:町名-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">町域、または市区町村の下の行政区分の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The town area or administrative division under municipality expressed as text.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="町名-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="丁目" type="ic:丁目-単純型">
+  <xsd:element name="通貨" type="ic:通貨-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">丁目の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">通貨名を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name of a currency.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="丁目-単純型">
+  <xsd:simpleType name="通貨-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="番地補足" type="ic:番地補足-単純型">
+  <xsd:element name="発行者" type="ic:実体型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">番地の前の、「東」「北」「浜」「甲」「イ」などの文字を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">IDやコードリストなどの発行主体を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The issuing entity of an ID system or code list, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="番地補足-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="番地" type="ic:番地-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">番、街区の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="番地-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="号" type="ic:号-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">号、住居番号の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="号-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="ビル名" type="ic:ビル名-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">ビル名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="ビル名-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="ビル番号" type="ic:ビル番号-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">ビルの番号の表記（号棟など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="ビル番号-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
   <xsd:element name="部屋番号" type="ic:部屋番号-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">部屋番号の表記（階数、号室など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The room number (such as floor and room number) expressed as text.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="部屋番号-単純型">
@@ -1441,911 +2810,16 @@
   <xsd:element name="方書" type="ic:方書-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">方書 (私書箱も含む)を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The C/O specification (including a private mail box).</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="方書-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <xsd:element name="名称" type="ic:名称型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">名称を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="組織" type="ic:組織型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">組織を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="担当者役職" type="ic:担当者役職-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">担当者の役職の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="担当者役職-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="担当者名" type="ic:氏名型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">担当者の氏名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="Eメールアドレス" type="ic:Eメールアドレス-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">電子メールアドレスを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="Eメールアドレス-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="送付先" type="ic:送付先-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">郵便物送付先の住所（私書箱など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="送付先-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="電話番号" type="ic:電話番号型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">電話番号を記述するためのプロパティ用語　※0-9 の数字及び + - ( ) , の文字のみを使用</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="内線番号" type="ic:内線番号-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">電話の内線番号を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="内線番号-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="FAX番号" type="ic:電話番号型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">FAX番号を記述するためのプロパティ用語　※0-9 の数字及び + - ( ) , の文字のみを使用 </xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="携帯電話番号" type="ic:電話番号型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">携帯電話番号を記述するためのプロパティ用語　※0-9 の数字及び + - ( ) , の文字のみを使用 </xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="Webサイト" type="ic:Webサイト-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">Webサイトを参照するURLを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="Webサイト-単純型">
-    <xsd:restriction base="xsd:anyURI"/>
-  </xsd:simpleType>
-  <xsd:element name="対応言語" type="ic:対応言語-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">連絡の際に利用可能な言語名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="対応言語-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="略称アルファベット" type="ic:略称アルファベット-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">頭文字などを使った略称表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="略称アルファベット-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="通称" type="ic:通称-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">正式な名称以外に一般的に使用されている名称を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="通称-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="活動状況" type="ic:状況型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">組織などの活動状況を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="活動" type="ic:活動型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">組織などの活動を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="概要" type="ic:概要-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">概要説明を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="概要-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="関連組織" type="ic:組織関連型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">関連する組織を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="関連人員" type="ic:人数型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">関連する人員の人数（従業員数など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="地物" type="ic:地物型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">関連する地物（施設、建物、土地など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="代表者" type="ic:構成員型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">組織の代表者を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="設立日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">組織などの設立日を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="備考" type="ic:備考-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">備考を記述するためのプロパティ用語　※補足情報などがある場合に記述</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="備考-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="事業種目" type="ic:事業種目-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">事業の種類の表記（販売業など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="事業種目-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="事業年度開始日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">事業年度の開始日を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="代理人" type="ic:組織関連型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">法定手続きなどの代理人となる組織を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="組織種別位置" type="ic:組織種別位置-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">組織名称中の組織種別の記載位置の表記（前、後、など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="組織種別位置-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="組織種別" type="ic:コード型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">組織の種別コード（株式会社など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="資本金" type="ic:金額型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">法人などの資本金を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="人数" type="ic:人数-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">人数を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="人数-単純型">
-    <xsd:restriction base="xsd:nonNegativeInteger"/>
-  </xsd:simpleType>
-  <xsd:element name="役割" type="ic:役割-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">人、組織、施設などの役割の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="役割-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="構成員" type="ic:人型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">構成員を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="地理識別子" type="ic:ID型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">場所の地理識別子を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="地理座標" type="ic:座標型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">場所の経緯度座標を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="座標参照系" type="ic:ID型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">座標の参照系を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="緯度経度書式" type="ic:緯度経度書式-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">度、分、秒の書式を記述するためのプロパティ用語　※書式はiso6709に準拠する</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="緯度経度書式-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="緯度" type="ic:緯度-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">緯度を記述するためのプロパティ用語　※-90から+90で記載</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="緯度-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="経度" type="ic:経度-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">経度を記述するためのプロパティ用語　※-180から+180で記載</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="経度-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="座標データ書式" type="ic:コード型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">点、線、面などを表現するデータ文字列の書式を表すコードを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="座標データ" type="ic:座標データ-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">点、線、面などを表現するデータ文字列の書式を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="座標データ-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="測地高度" type="ic:長さ型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">測地高度を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="体系" type="ic:ID体系型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">IDの体系を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="識別値" type="xsd:string">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">IDやコードの値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <!--"識別値"プロパティは、xsi:typeでコードを定義した型を参照するため"識別値-単純型"は用いない-->
-  <xsd:element name="発行者" type="ic:実体型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">IDやコードリストなどの発行主体を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="バージョン" type="ic:バージョン-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">バージョン情報を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="バージョン-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="URI" type="ic:URI-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">参照のためのURIを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="URI-単純型">
-    <xsd:restriction base="xsd:anyURI"/>
-  </xsd:simpleType>
-  <xsd:element name="種別コード" type="ic:コード型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">種別コードを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="自動認識ID" type="ic:自動認識ID-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">自動認識ID（バーコードや二次元コードの画像など）が表すURLを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="自動認識ID-単純型">
-    <xsd:restriction base="xsd:anyURI"/>
-  </xsd:simpleType>
-  <xsd:element name="価格" type="ic:価格型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">価格（製品の価格など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="説明" type="ic:説明-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">説明を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="説明-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="使用方法" type="ic:使用方法-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">使用方法の説明を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="使用方法-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="製造者" type="ic:製造者-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">製造者名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="製造者-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="製造者ID" type="ic:ID型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">製造者によって割り当てられたIDを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="販売業者" type="ic:販売業者-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">販売業者名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="販売業者-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="販売業者ID" type="ic:ID型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">販売業者によって割り当てられたIDを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="入数" type="ic:数量型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">箱などに含まれる物の数量を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="形態" type="ic:形態-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">製品などの形態の説明を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="形態-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="重量" type="ic:重量型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">重量を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="サイズ" type="ic:サイズ-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">サイズの表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="サイズ-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="幅" type="ic:長さ型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">形状の幅を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="高さ" type="ic:長さ型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">形状の高さを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="長さ" type="ic:長さ型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">形状の長さを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="色" type="ic:色-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">色の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="色-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="原産国" type="ic:原産国-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">原産国名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="原産国-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="原産国コード" type="ic:コード型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">原産国を表すコードを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="規制情報" type="ic:規制情報-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">規制に関する情報（取り扱い上の注意など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="規制情報-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="製造日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">製造日を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="ロット番号" type="ic:ロット番号-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">製造ロットの番号を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="ロット番号-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="消費期限" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">消費期限を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="使用期限" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">使用期限を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="賞味期限" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">賞味期限を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="シリアル番号" type="ic:ID型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">シリアル番号を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="状態" type="ic:状態-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">状態を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="状態-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="所有者" type="ic:実体型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">所有者を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="購入価格" type="ic:金額型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">購入価格を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="要約" type="ic:要約-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">説明の要約を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="要約-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="アクセス" type="ic:アクセス型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">アクセス方法を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="参照" type="ic:参照-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">追加情報などを参照するURLを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="参照-単純型">
-    <xsd:restriction base="xsd:anyURI"/>
-  </xsd:simpleType>
-  <xsd:element name="画像" type="ic:画像-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">画像を参照するURLを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="画像-単純型">
-    <xsd:restriction base="xsd:anyURI"/>
-  </xsd:simpleType>
-  <xsd:element name="設備" type="ic:設備型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">設備を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="関与" type="ic:関与型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">関連する組織や人（関連性の記述を含む）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="面積" type="ic:面積型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">土地などの面積を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="利用可能時間" type="ic:期間スケジュール型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">利用可能日と利用可能時間を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="料金" type="ic:価格型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">料金（施設、設備の利用料金やイベントの参加費など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="収容人数" type="ic:数量型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">収容人数を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="駐車場" type="ic:駐車場型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">駐車場を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="建物" type="ic:建物型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建物を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="関連施設" type="ic:施設関連型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">関連する施設（上位施設、下位施設など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="施設" type="ic:施設型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">施設を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="敷地面積" type="ic:面積型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">敷地面積を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="主要用途" type="ic:主要用途-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建物などの主要用途の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="主要用途-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="建築面積" type="ic:面積型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建築面積を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="延べ面積" type="ic:面積型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建物の延べ床面積を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="最高の高さ" type="ic:長さ型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">最高点の高さを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="地上階数" type="ic:地上階数-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建物の地上階数を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="地上階数-単純型">
-    <xsd:restriction base="xsd:decimal"/>
-  </xsd:simpleType>
-  <xsd:element name="地下階数" type="ic:地下階数-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建物の地下階数を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="地下階数-単純型">
-    <xsd:restriction base="xsd:decimal"/>
-  </xsd:simpleType>
-  <xsd:element name="構造" type="ic:構造-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建物などの構造の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="構造-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="竣工日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">建物の竣工日を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="駐車場種別" type="ic:駐車場種別-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">駐車場の種別の表記を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="駐車場種別-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="収容台数" type="ic:収容台数-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">駐車場の収容可能台数を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="収容台数-単純型">
-    <xsd:restriction base="xsd:integer"/>
-  </xsd:simpleType>
-  <xsd:element name="設置地点" type="ic:地物型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">設備などが設置されている地物（施設や建物など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="設置位置" type="ic:設置位置-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">設備などの設置場所の表記（受付横など）を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="設置位置-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="外部利用可否" type="ic:外部利用可否-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">施設や設備などの外部利用可否の記述のためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="外部利用可否-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="利用者" type="ic:利用者-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">利用者の条件を記述するためのプロパティ用語　※利用者に限定条件がある場合</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="利用者-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="設置日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">設備などの設置日を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="設置者" type="ic:組織型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">設備などを設置した組織を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="管理者" type="ic:実体型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">管理している組織や人を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="バリアフリー" type="ic:バリアフリー-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">設備などのバリアフリーに関する情報の記述のためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="バリアフリー-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="開催場所" type="ic:地物型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">イベントなどの開催場所を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="期間" type="ic:期間スケジュール型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">開始から終了までの時間範囲を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="参加方法" type="ic:参加方法-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">イベントなどへの参加方法の説明を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="参加方法-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="関連イベント" type="ic:イベント型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">関連するイベントを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="対象者" type="ic:対象者-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">対象となる人に関する説明を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="対象者-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="キーワード" type="ic:キーワード-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">キーワードの記述のためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="キーワード-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="場所" type="ic:場所型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">場所を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="日時" type="ic:日時型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">活動などが行われる日時を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="役割コード" type="ic:コード型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">人、組織、施設などの役割を表すコードを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="関与者" type="ic:実体型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">関連する組織や人を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="数値" type="ic:数値-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">数値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="数値-単純型">
-    <xsd:restriction base="xsd:decimal"/>
-  </xsd:simpleType>
-  <xsd:element name="単位" type="ic:単位コード型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">計測値の単位を表すコードを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="単位表記" type="ic:単位表記-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">単位の文字列による表現を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="単位表記-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="通貨" type="ic:通貨-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">通貨名を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="通貨-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="通貨コード" type="uncefactISO4217:ISO3AlphaCurrencyCodeContentType">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">通貨コードを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="乗数" type="ic:乗数-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">基本単位に対する変換乗数を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="乗数-単純型">
-    <xsd:restriction base="xsd:double"/>
-  </xsd:simpleType>
-  <xsd:element name="金額" type="ic:金額型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">金額を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="発生日" type="ic:日時型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">状況などの発生日時を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="標準型日時" type="ic:標準型日時-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日時を記述するためのプロパティ用語　※XMLのxsd:dateTime型に準拠したもの</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="標準型日時-単純型">
-    <xsd:restriction base="xsd:dateTime"/>
-  </xsd:simpleType>
-  <xsd:element name="年号" type="ic:年号-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日付や日時などの元号を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="年号-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="年" type="ic:年-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日付や日時などの年の値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="年-単純型">
-    <xsd:restriction base="xsd:integer"/>
-  </xsd:simpleType>
-  <xsd:element name="月" type="ic:月-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日付や日時などの月の値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="月-単純型">
-    <xsd:restriction base="xsd:integer"/>
-  </xsd:simpleType>
-  <xsd:element name="日" type="ic:日-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日付や日時などの日の値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="日-単純型">
-    <xsd:restriction base="xsd:integer"/>
-  </xsd:simpleType>
-  <xsd:element name="時" type="ic:時-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日時などの時の値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="時-単純型">
-    <xsd:restriction base="xsd:integer"/>
-  </xsd:simpleType>
-  <xsd:element name="分" type="ic:分-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日時などの分の値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="分-単純型">
-    <xsd:restriction base="xsd:integer"/>
-  </xsd:simpleType>
-  <xsd:element name="秒" type="ic:秒-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日時などの秒の値を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="秒-単純型">
-    <xsd:restriction base="xsd:decimal"/>
-  </xsd:simpleType>
-  <xsd:element name="時間帯" type="ic:時間帯-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">時間帯を記述するためのプロパティ用語　※協定世界時からの時間差</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="時間帯-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="カレンダー" type="ic:コード型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">カレンダーの種類を表すコードを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="標準型日付" type="ic:標準型日付-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日付を記述するためのプロパティ用語　※XMLのxsd:date型に準拠したもの</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="標準型日付-単純型">
-    <xsd:restriction base="xsd:date"/>
-  </xsd:simpleType>
-  <xsd:element name="開始日時" type="ic:日時型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">期間の開始日時を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="終了日時" type="ic:日時型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">期間の終了日時を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="開催日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">イベントなどが開催される日付を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="開始日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">イベントなどの開始日を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="終了日" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">イベントなどの終了日を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
   <xsd:element name="開始時間" type="ic:開始時間-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">場所やサービスなどの開始時間を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The starting time of a place or service, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="開始時間-単純型">
@@ -2354,235 +2828,403 @@
   <xsd:element name="終了時間" type="ic:終了時間-単純型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">場所やサービスなどの終了時間を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The closing time of a place or service, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:simpleType name="終了時間-単純型">
     <xsd:restriction base="xsd:time"/>
   </xsd:simpleType>
-  <xsd:element name="開催期日" type="ic:開催期日-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">スケジュールが有効となる日を記述するためのプロパティ用語　※スケジュールの種別が「週間」の場合は曜日、「月間」の場合は月の中の日、「年間」の場合は年の中の月日を指定する。</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="開催期日-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="有効開始日時" type="ic:日時型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">スケジュールが有効になる日時を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="有効終了日時" type="ic:日時型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">スケジュールが無効になる日時を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="コード種別" type="ic:コードリスト型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">コードの種別を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
   <xsd:element name="上位コード" type="ic:コード型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">当該コードの上位に位置するコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The upper-level code of the code concerned.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="下位コード" type="ic:コード型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">当該コードの下位に位置するコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The lower-level code of the code concerned.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="関連コード" type="ic:コード型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">当該コードに関連するコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code related to the code concerned.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="量種別" type="ic:量種別-単純型">
+  <xsd:element name="日時" type="ic:日時型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">量の種別の表記を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">活動などが行われる日時を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The date and time when an activity, etc. are held.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="量種別-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="始点" type="ic:地物型" nillable="true">
+  <xsd:element name="関連人員" type="ic:人数型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">始点となる地物を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">関連する人員の人数（従業員数など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The number of personnel involved (such as the number of employees).</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="始点備考" type="ic:始点備考-単純型">
+  <xsd:element name="面積" type="ic:面積型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">始点についての備考を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">土地などの面積を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The area of a land, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="始点備考-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="終点" type="ic:地物型" nillable="true">
+  <xsd:element name="活動" type="ic:活動型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">終点となる地物を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">組織などの活動を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The activity of an organization, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="終点備考" type="ic:終点備考-単純型">
+  <xsd:element name="提供者" type="ic:実体型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">終点についての備考を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">サービス等を提供する組織や人を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The entity such as an organization or person that provide a service, etc.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="終点備考-単純型">
-    <xsd:restriction base="xsd:string"/>
-  </xsd:simpleType>
-  <xsd:element name="アクセス区間" type="ic:アクセス区間型" nillable="true">
+  <xsd:element name="参照先" type="ic:参照先-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">アクセス方法の各区間の一覧を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">追加情報などを参照するURLを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The URL that refers to additional information.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:element name="時間" type="ic:数量型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">所要時間を記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="地図" type="ic:地図-単純型">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">地図を参照するURLを記述するためのプロパティ用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:simpleType name="地図-単純型">
+  <xsd:simpleType name="参照先-単純型">
     <xsd:restriction base="xsd:anyURI"/>
   </xsd:simpleType>
-  <xsd:element name="路線" type="ic:路線-単純型">
+  <xsd:element name="表題" type="ic:表題-単純型">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">アクセス区間に用いる交通の路線（事業者及び路線名、バス系統など）を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">文書に与えられた名前を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The name given to a document.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
-  <xsd:simpleType name="路線-単純型">
+  <xsd:simpleType name="表題-単純型">
     <xsd:restriction base="xsd:string"/>
   </xsd:simpleType>
-  <!--クラスに対応する要素（プロパティに対応する要素として作成されていないもの）-->
+  <xsd:element name="作成者" type="ic:実体型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書の内容の作成に主たる責任をもつ実体を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The entity primarily responsible for making a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="寄与者" type="ic:実体型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書の内容になんらかの寄与、貢献をした実体を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The entity responsible for making contributions to a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="日付" type="ic:日付型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書のライフサイクルにおけるなんらかの事象に関するある時点又は時間的区間を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The point or period of time associated with an event in the lifecycle of a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="資源タイプ" type="ic:資源タイプ-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書の性質又はジャンルを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The nature or genre of a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="資源タイプ-単純型">
+    <xsd:restriction base="xsd:anyURI"/>
+  </xsd:simpleType>
+  <xsd:element name="記録形式" type="ic:記録形式-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書のファイルの記録形式、物理媒体又は次元を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The file format, physical medium, or dimensions of a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="記録形式-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="記録形式コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書のファイルの記録形式、物理媒体又は次元のコードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a file format, physical medium, or dimensions of a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="出処" type="ic:出処-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">当該文書の由来となるような関係の文書源を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The related document from which a described document is derived.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="出処-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="言語" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書の言語を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The language of a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="権利管理" type="ic:文書型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書に含まれる、又はかかわる権利管理に関する情報を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The information about rights held in and over a document.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="利用対象" type="ic:対象型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">利用対象となる事物を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The thing to be targeted for a service, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="利用方法" type="ic:利用方法-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">利用方法を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The procedure to use a service, etc.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="利用方法-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="制約" type="ic:制約型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The restriction on a thing to be targeted.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="制約コード" type="ic:コード型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">制約コードを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The code specifying a restriction.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="制約対象" type="ic:制約対象-単純型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">制約対象を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The targeted thing to be restricted.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:simpleType name="制約対象-単純型">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="上限値" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">範囲制約の上限値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The upper limit of the range of a restriction.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="境界を含まない上限値" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">範囲制約の境界を含まない上限値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The upper limit of the range of s restriction, which excludes the boundary.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="下限値" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">範囲制約の下限値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The lower limit of the range of a restriction.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="境界を含まない下限値" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">範囲制約の境界を含まない下限値を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">The lower limit of the range of a restriction, which excludes the boundary.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="年齢" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">人の年齢を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">An age of the person.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="身長" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">人の身長を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A height of the person.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="体重" type="ic:数量型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">人の体重を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A weight of the person.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:element name="人" type="ic:人型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">人の情報を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express information of a person.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="業務組織" type="ic:業務組織型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">業務組織を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a business organization.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="法人" type="ic:法人型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">法人を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a corporation.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="組織関連" type="ic:組織関連型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">組織の関連を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an association with another organization.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="座標" type="ic:座標型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">座標を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express latitude-longitude coordinates.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="ID体系" type="ic:ID体系型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">IDの体系を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a system for specifying identifiers.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="製品" type="ic:製品型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">製品を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a product.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="製品個品" type="ic:製品個品型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">製品を個別に表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an individual product.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="土地" type="ic:土地型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">特定の用途に用いられる土地を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a plot of land used for a specific purpose.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="施設関連" type="ic:施設関連型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">施設の関連を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an associated facility.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="イベント" type="ic:イベント型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">時間と場所を指定して行われるイベント（ビジネス、スポーツ、教育、娯楽などの催し）を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an event (such as a business, sport, educational, or entertaining activity) which is held at the specified time and location.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="数量" type="ic:数量型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">数量を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express quantity.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="容量" type="ic:容量型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">容量を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express volume.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="実体" type="ic:実体型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">実体を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an entity.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="状況" type="ic:状況型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">状況を表現するためのクラス用語</xsd:documentation>
-    </xsd:annotation>
-  </xsd:element>
-  <xsd:element name="日付" type="ic:日付型" nillable="true">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="ja">日付を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express state of affairs.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="期間スケジュール" type="ic:期間スケジュール型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">期間やスケジュールを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a period or schedule.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="イベントスケジュール" type="ic:イベントスケジュール型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">イベントスケジュールを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an event schedule.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="定期スケジュール" type="ic:定期スケジュール型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">定期的に繰り返されるスケジュールを表現するクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a schedule that is repeatedly held on a regular basis.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="詳細スケジュール" type="ic:詳細スケジュール型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">（将来的に整備する予定）
-施設等のオープン日とオープン時間を表現するためのクラス用語。複数のスケジュールが列挙された場合はそれらの和を取るものとする</xsd:documentation>
+      <xsd:documentation xml:lang="ja">（将来的に整備する予定）施設等のオープン日とオープン時間を表現するためのクラス用語。複数のスケジュールが列挙された場合はそれらの和を取るものとする</xsd:documentation>
+      <xsd:documentation xml:lang="en">(To be defined in the future)A class term to express opening time and day of a facility. When multiple schedules are listed, enumerate them.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="詳細スケジュール規則" type="ic:詳細スケジュール規則型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">（将来的に整備する予定）
-繰り返し型のスケジュールを定義するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">（将来的に整備する予定）繰り返し型のスケジュールを定義するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">(To be defined in the future) class term to define a repetitive schedule.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="コード" type="ic:コード型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">コードを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a code.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="単位コード" type="ic:単位コード型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">単位コードを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a unit code.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="コードリスト" type="ic:コードリスト型" nillable="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">コードリストを表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a code list.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="概念" type="ic:概念型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">全ての型のベースとなる基本型としてのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term that serves as the base type for all types.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="事物" type="ic:事物型" nillable="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="ja">全ての型のベースとなる基本型としてのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="ja">識別可能なことやものを表すためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to represent an identifiable thing.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="サービス" type="ic:サービス型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">サービスの情報を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a service.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="文書" type="ic:文書型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">文書の情報を表すクラス用語（Dublin Core Metadata Element Setに準拠）</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express information of a document (that complies with Dublin Core Metadata Element Set).</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="対象" type="ic:対象型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">イベントや制度等の対象となる事物を表すクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a thing to be targeted for an event or system.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="コード制約" type="ic:コード制約型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約条件をコードによって指定するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a restriction on a targeted thing as a code.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="範囲制約" type="ic:範囲制約型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約条件を数量の範囲によって指定するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a restriction on a targeted thing by means of a numerical range.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="期間制約" type="ic:期間制約型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">対象となる事物の制約条件を期間によって指定するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express a restriction on a targeted thing by means of a period.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
 </xsd:schema>
