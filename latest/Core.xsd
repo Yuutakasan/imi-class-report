@@ -3,7 +3,7 @@
             xmlns:dct="http://purl.org/dc/terms/"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://imi.go.jp/ns/core/2"
-            version="2.4" xmlns:ic="http://imi.go.jp/ns/core/2"
+            version="2.4.1" xmlns:ic="http://imi.go.jp/ns/core/2"
             xmlns:uncefactISO4217="urn:un:unece:uncefact:codelist:standard:ISO:ISO3AlphaCurrencyCode:2012-08-31">
 
 
@@ -14,7 +14,7 @@
       <dct:title xml:lang="ja">共通語彙基盤コア語彙</dct:title>
       <dct:title xml:lang="en">IMI Core Vocabulary</dct:title>
       <dct:license>http://creativecommons.org/publicdomain/zero/1.0/</dct:license>
-      <dct:issued>2017-04-21</dct:issued>
+      <dct:issued>2017-11-10</dct:issued>
       <dct:creator>
         <foaf:name xml:lang="ja">経済産業省</foaf:name>
         <foaf:name xml:lang="en">Ministry of Economy, Trade and Industry</foaf:name>
@@ -76,7 +76,6 @@
   </xsd:complexType>
   <xsd:group name="名称型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:カナ表記" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:ローマ字表記" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
@@ -96,7 +95,6 @@
   </xsd:complexType>
   <xsd:group name="氏名型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:姓名" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:姓名カナ表記" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:姓名ローマ字表記" minOccurs="0" maxOccurs="1"/>
@@ -126,7 +124,6 @@
   </xsd:complexType>
   <xsd:group name="住所型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:郵便番号" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:住所コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:国" minOccurs="0" maxOccurs="1"/>
@@ -162,7 +159,6 @@
   </xsd:complexType>
   <xsd:group name="連絡先型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:組織" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:担当者役職" minOccurs="0" maxOccurs="unbounded"/>
@@ -276,7 +272,6 @@
   </xsd:complexType>
   <xsd:group name="人数型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:人数" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:group>
@@ -419,8 +414,6 @@
   </xsd:complexType>
   <xsd:group name="製品型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:自動認識ID" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:価格" minOccurs="0" maxOccurs="unbounded"/>
@@ -505,8 +498,6 @@
   </xsd:complexType>
   <xsd:group name="土地型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:面積" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
@@ -525,8 +516,6 @@
   </xsd:complexType>
   <xsd:group name="施設型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:利用可能時間" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:料金" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:収容人数" minOccurs="0" maxOccurs="unbounded"/>
@@ -647,7 +636,6 @@
   </xsd:complexType>
   <xsd:group name="イベント型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:関連組織" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:開催場所" minOccurs="0" maxOccurs="unbounded"/>
@@ -677,7 +665,6 @@
   </xsd:complexType>
   <xsd:group name="活動型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:関与" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:場所" minOccurs="0" maxOccurs="unbounded"/>
@@ -841,7 +828,6 @@
   </xsd:complexType>
   <xsd:group name="価格型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:金額" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:group>
@@ -998,7 +984,6 @@
   </xsd:complexType>
   <xsd:group name="定期スケジュール型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:開催期日" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:有効開始日時" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:有効終了日時" minOccurs="0" maxOccurs="1"/>
@@ -1106,7 +1091,6 @@
   <xsd:group name="アクセス型-固有要素グループ">
     <xsd:sequence>
       <xsd:element ref="ic:ID" minOccurs="0" maxOccurs="1"/>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:始点" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:始点備考" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:終点" minOccurs="0" maxOccurs="1"/>
@@ -1132,7 +1116,6 @@
   </xsd:complexType>
   <xsd:group name="アクセス区間型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:始点" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:始点備考" minOccurs="0" maxOccurs="1"/>
       <xsd:element ref="ic:路線" minOccurs="0" maxOccurs="1"/>
@@ -1146,9 +1129,19 @@
       <xsd:documentation xml:lang="ja">全ての型のベースとなる基本型としてのクラス用語</xsd:documentation>
       <xsd:documentation xml:lang="en">A class term that serves as the base type for all types.</xsd:documentation>
     </xsd:annotation>
+    <xsd:sequence>
+        <xsd:group ref="ic:概念型-固有要素グループ"/>
+    </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID"/>
     <xsd:attribute name="ref" type="xsd:IDREF"/>
   </xsd:complexType>
+  <xsd:group name="概念型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:メタデータ" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
   <xsd:complexType name="事物型">
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">識別可能なことやものを表すためのクラス用語</xsd:documentation>
@@ -1169,6 +1162,7 @@
       <xsd:element ref="ic:参照" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:画像" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element ref="ic:記述" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="参照型">
@@ -1186,9 +1180,25 @@
   </xsd:complexType>
   <xsd:group name="参照型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:参照先" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="記述型">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">種別付きの説明文を表現するためのクラス用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A class term to express an explanation in text with a category.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="ic:概念型">
+        <xsd:sequence>
+          <xsd:group ref="ic:記述型-固有要素グループ"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="記述型-固有要素グループ">
+    <xsd:sequence>
+      <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
   <xsd:complexType name="サービス型">
@@ -1206,8 +1216,6 @@
   </xsd:complexType>
   <xsd:group name="サービス型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element ref="ic:種別コード" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:名称" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:利用対象" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:提供者" minOccurs="0" maxOccurs="unbounded"/>
@@ -1276,7 +1284,6 @@
   </xsd:complexType>
   <xsd:group name="制約型-固有要素グループ">
     <xsd:sequence>
-      <xsd:element ref="ic:種別" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:制約対象" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element ref="ic:説明" minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
@@ -3039,6 +3046,18 @@
     <xsd:annotation>
       <xsd:documentation xml:lang="ja">人の体重を記述するためのプロパティ用語</xsd:documentation>
       <xsd:documentation xml:lang="en">A weight of the person.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="メタデータ" type="ic:文書型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">データのメタデータを記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A document specifying the metadata of a data.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:element name="記述" type="ic:記述型" nillable="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="ja">種別付きの説明文を記述するためのプロパティ用語</xsd:documentation>
+      <xsd:documentation xml:lang="en">A explanation for the thing.</xsd:documentation>
     </xsd:annotation>
   </xsd:element>
   <xsd:element name="人" type="ic:人型" nillable="true">
