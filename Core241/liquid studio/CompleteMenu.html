@@ -1,0 +1,1074 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>XML Schema Documenatation Menu</title>
+      <!-- saved from url=(0014)about:internet --><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="searchindex.js"></script><link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript">
+         <!--
+            $(document).ready(function () {
+                setTabs();
+            });
+    
+        	var filenames = null;
+        	var keywordIndex = null;
+
+        	function getSearchJS(searchBoxID, ulResults) 
+            {
+        		if (filenames == null) {
+        		    filenames = CreateFileRefs();
+        		}
+        		if (keywordIndex == null) {
+        		    keywordIndex = CreateWordIndex();
+        		}
+
+        		var data = '';
+        		var searchText = $("#" + searchBoxID).attr("value");
+        		var searchTerms = searchText.split(' ');
+        		var fileIndexResults = new Array();
+
+        		for (var sti = 0; sti < searchTerms.length; sti++) {
+        		    var searchTerm = trim(searchTerms[sti]).toLowerCase();
+
+        		    for (var i = 0; i < keywordIndex.length; i++) {
+        		        if (keywordIndex[i][0].indexOf(searchTerm) != -1) {
+        		            fileIndexResults = fileIndexResults.concat(keywordIndex[i][1]);
+        		        }
+        		    }
+        		}
+
+        		fileIndexResults = unique(fileIndexResults);
+        		for (var ri = 0; ri < fileIndexResults.length; ri++) {
+        		    var resultOffset = fileIndexResults[ri];
+        		    data += "<li><a href='" + filenames[resultOffset][1] + "' target='ContentFrame'>" + filenames[resultOffset][0] + "</a></li>";
+        		}
+
+        		if (data == '')
+        		    data = "<li>No Results</li>";
+
+        		$("#" + ulResults).html(data);
+        	}
+                        --></script></head>
+   <body>
+      <form action="CompleteMenu.html">
+         <ul class="tabs">
+            <li><a href="#tab1">Index</a></li>
+            <li><a href="#tab2">Search</a></li>
+         </ul>
+         <div class="tab_container">
+            <div id="tab1" class="tab_content">
+               <div>
+                  <ul id="ulMenu" class="treeview">
+                     <li id="Schema" class="parent"><a href="javascript:toggleNode('Schema')"><img height="11" width="11" src="images/plus.gif"></img>Schema</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="core241_xsd"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="core241_xsd.html" target="ContentFrame">Core241.xsd</a></li>
+                           <li id="iso_iso3alphacurrencycode_2012-08-31_xsd"><a href="urn_un_unece_uncefact_codelist_standard_iso_iso3alphacurrencycode_2012-08-31.html" target="ContentFrame">uncefactISO4217</a>:
+                              <a href="iso_iso3alphacurrencycode_2012-08-31_xsd.html" target="ContentFrame">ISO_ISO3AlphaCurrencyCode_2012-08-31.xsd</a></li>
+                        </ul>
+                     </li>
+                     <li id="ComplexType" class="parent"><a href="javascript:toggleNode('ComplexType')"><img height="11" width="11" src="images/plus.gif"></img>ComplexType</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="id体系型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="id%E4%BD%93%E7%B3%BB%E5%9E%8B.html" target="ContentFrame">ID体系型</a></li>
+                           <li id="id型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="id%E5%9E%8B.html" target="ContentFrame">ID型</a></li>
+                           <li id="アクセス区間型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%8C%BA%E9%96%93%E5%9E%8B.html" target="ContentFrame">アクセス区間型</a></li>
+                           <li id="アクセス型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%9E%8B.html" target="ContentFrame">アクセス型</a></li>
+                           <li id="イベントスケジュール型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%9E%8B.html" target="ContentFrame">イベントスケジュール型</a></li>
+                           <li id="イベント型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%9E%8B.html" target="ContentFrame">イベント型</a></li>
+                           <li id="コードリスト型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%88%E5%9E%8B.html" target="ContentFrame">コードリスト型</a></li>
+                           <li id="コード制約型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E5%88%B6%E7%B4%84%E5%9E%8B.html" target="ContentFrame">コード制約型</a></li>
+                           <li id="コード型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E5%9E%8B.html" target="ContentFrame">コード型</a></li>
+                           <li id="サービス型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%9E%8B.html" target="ContentFrame">サービス型</a></li>
+                           <li id="事物型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%8B%E7%89%A9%E5%9E%8B.html" target="ContentFrame">事物型</a></li>
+                           <li id="人型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%BA%E5%9E%8B.html" target="ContentFrame">人型</a></li>
+                           <li id="人数型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%BA%E6%95%B0%E5%9E%8B.html" target="ContentFrame">人数型</a></li>
+                           <li id="住所型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%8F%E6%89%80%E5%9E%8B.html" target="ContentFrame">住所型</a></li>
+                           <li id="価格型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BE%A1%E6%A0%BC%E5%9E%8B.html" target="ContentFrame">価格型</a></li>
+                           <li id="制約型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%B6%E7%B4%84%E5%9E%8B.html" target="ContentFrame">制約型</a></li>
+                           <li id="単位コード型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8D%98%E4%BD%8D%E3%82%B3%E3%83%BC%E3%83%89%E5%9E%8B.html" target="ContentFrame">単位コード型</a></li>
+                           <li id="参照型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%82%E7%85%A7%E5%9E%8B.html" target="ContentFrame">参照型</a></li>
+                           <li id="名称型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D%E7%A7%B0%E5%9E%8B.html" target="ContentFrame">名称型</a></li>
+                           <li id="土地型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%9F%E5%9C%B0%E5%9E%8B.html" target="ContentFrame">土地型</a></li>
+                           <li id="地物型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E7%89%A9%E5%9E%8B.html" target="ContentFrame">地物型</a></li>
+                           <li id="場所型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A0%B4%E6%89%80%E5%9E%8B.html" target="ContentFrame">場所型</a></li>
+                           <li id="定期スケジュール型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%9A%E6%9C%9F%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%9E%8B.html" target="ContentFrame">定期スケジュール型</a></li>
+                           <li id="実体型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%9F%E4%BD%93%E5%9E%8B.html" target="ContentFrame">実体型</a></li>
+                           <li id="容量型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%B9%E9%87%8F%E5%9E%8B.html" target="ContentFrame">容量型</a></li>
+                           <li id="対象型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AF%BE%E8%B1%A1%E5%9E%8B.html" target="ContentFrame">対象型</a></li>
+                           <li id="座標型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BA%A7%E6%A8%99%E5%9E%8B.html" target="ContentFrame">座標型</a></li>
+                           <li id="建物型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BB%BA%E7%89%A9%E5%9E%8B.html" target="ContentFrame">建物型</a></li>
+                           <li id="数量型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%95%B0%E9%87%8F%E5%9E%8B.html" target="ContentFrame">数量型</a></li>
+                           <li id="文書型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%87%E6%9B%B8%E5%9E%8B.html" target="ContentFrame">文書型</a></li>
+                           <li id="施設型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%BD%E8%A8%AD%E5%9E%8B.html" target="ContentFrame">施設型</a></li>
+                           <li id="施設関連型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%BD%E8%A8%AD%E9%96%A2%E9%80%A3%E5%9E%8B.html" target="ContentFrame">施設関連型</a></li>
+                           <li id="日付型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5%E4%BB%98%E5%9E%8B.html" target="ContentFrame">日付型</a></li>
+                           <li id="日時型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5%E6%99%82%E5%9E%8B.html" target="ContentFrame">日時型</a></li>
+                           <li id="期間スケジュール型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%9E%8B.html" target="ContentFrame">期間スケジュール型</a></li>
+                           <li id="期間制約型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93%E5%88%B6%E7%B4%84%E5%9E%8B.html" target="ContentFrame">期間制約型</a></li>
+                           <li id="期間型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93%E5%9E%8B.html" target="ContentFrame">期間型</a></li>
+                           <li id="業務組織型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A5%AD%E5%8B%99%E7%B5%84%E7%B9%94%E5%9E%8B.html" target="ContentFrame">業務組織型</a></li>
+                           <li id="概念型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A6%82%E5%BF%B5%E5%9E%8B.html" target="ContentFrame">概念型</a></li>
+                           <li id="構成員型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A7%8B%E6%88%90%E5%93%A1%E5%9E%8B.html" target="ContentFrame">構成員型</a></li>
+                           <li id="氏名型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B0%8F%E5%90%8D%E5%9E%8B.html" target="ContentFrame">氏名型</a></li>
+                           <li id="法人型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B3%95%E4%BA%BA%E5%9E%8B.html" target="ContentFrame">法人型</a></li>
+                           <li id="活動型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B4%BB%E5%8B%95%E5%9E%8B.html" target="ContentFrame">活動型</a></li>
+                           <li id="状況型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%8A%B6%E6%B3%81%E5%9E%8B.html" target="ContentFrame">状況型</a></li>
+                           <li id="範囲制約型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%AF%84%E5%9B%B2%E5%88%B6%E7%B4%84%E5%9E%8B.html" target="ContentFrame">範囲制約型</a></li>
+                           <li id="組織型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E5%9E%8B.html" target="ContentFrame">組織型</a></li>
+                           <li id="組織関連型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E9%96%A2%E9%80%A3%E5%9E%8B.html" target="ContentFrame">組織関連型</a></li>
+                           <li id="製品個品型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E5%93%81%E5%80%8B%E5%93%81%E5%9E%8B.html" target="ContentFrame">製品個品型</a></li>
+                           <li id="製品型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E5%93%81%E5%9E%8B.html" target="ContentFrame">製品型</a></li>
+                           <li id="記述型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%98%E8%BF%B0%E5%9E%8B.html" target="ContentFrame">記述型</a></li>
+                           <li id="設備型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E5%82%99%E5%9E%8B.html" target="ContentFrame">設備型</a></li>
+                           <li id="詳細スケジュール型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A9%B3%E7%B4%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%9E%8B.html" target="ContentFrame">詳細スケジュール型</a></li>
+                           <li id="詳細スケジュール規則型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A9%B3%E7%B4%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E8%A6%8F%E5%89%87%E5%9E%8B.html" target="ContentFrame">詳細スケジュール規則型</a></li>
+                           <li id="連絡先型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%A3%E7%B5%A1%E5%85%88%E5%9E%8B.html" target="ContentFrame">連絡先型</a></li>
+                           <li id="重量型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%8D%E9%87%8F%E5%9E%8B.html" target="ContentFrame">重量型</a></li>
+                           <li id="金額型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%91%E9%A1%8D%E5%9E%8B.html" target="ContentFrame">金額型</a></li>
+                           <li id="長さ型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%95%B7%E3%81%95%E5%9E%8B.html" target="ContentFrame">長さ型</a></li>
+                           <li id="関与型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E4%B8%8E%E5%9E%8B.html" target="ContentFrame">関与型</a></li>
+                           <li id="電話番号型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%E5%9E%8B.html" target="ContentFrame">電話番号型</a></li>
+                           <li id="面積型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%9D%A2%E7%A9%8D%E5%9E%8B.html" target="ContentFrame">面積型</a></li>
+                           <li id="駐車場型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%A7%90%E8%BB%8A%E5%A0%B4%E5%9E%8B.html" target="ContentFrame">駐車場型</a></li>
+                        </ul>
+                     </li>
+                     <li id="Element" class="parent"><a href="javascript:toggleNode('Element')"><img height="11" width="11" src="images/plus.gif"></img>Element</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="eメールアドレス"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="e%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9.html" target="ContentFrame">Eメールアドレス</a></li>
+                           <li id="fax番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="fax%E7%95%AA%E5%8F%B7.html" target="ContentFrame">FAX番号</a></li>
+                           <li id="id2"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="id2.html" target="ContentFrame">ID</a></li>
+                           <li id="id体系"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="id%E4%BD%93%E7%B3%BB.html" target="ContentFrame">ID体系</a></li>
+                           <li id="iso3alphacurrencycode"><a href="urn_un_unece_uncefact_codelist_standard_iso_iso3alphacurrencycode_2012-08-31.html" target="ContentFrame">uncefactISO4217</a>:
+                              <a href="iso3alphacurrencycode.html" target="ContentFrame">ISO3AlphaCurrencyCode</a></li>
+                           <li id="webサイト"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="web%E3%82%B5%E3%82%A4%E3%83%88.html" target="ContentFrame">Webサイト</a></li>
+                           <li id="アクセス"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9.html" target="ContentFrame">アクセス</a></li>
+                           <li id="アクセス区間"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%8C%BA%E9%96%93.html" target="ContentFrame">アクセス区間</a></li>
+                           <li id="イベント"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88.html" target="ContentFrame">イベント</a></li>
+                           <li id="イベントスケジュール"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB.html" target="ContentFrame">イベントスケジュール</a></li>
+                           <li id="カナ表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98.html" target="ContentFrame">カナ表記</a></li>
+                           <li id="カレンダー"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC.html" target="ContentFrame">カレンダー</a></li>
+                           <li id="キーワード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89.html" target="ContentFrame">キーワード</a></li>
+                           <li id="コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">コード</a></li>
+                           <li id="コードリスト"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%88.html" target="ContentFrame">コードリスト</a></li>
+                           <li id="コード制約"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E5%88%B6%E7%B4%84.html" target="ContentFrame">コード制約</a></li>
+                           <li id="コード種別"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E7%A8%AE%E5%88%A5.html" target="ContentFrame">コード種別</a></li>
+                           <li id="サイズ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B5%E3%82%A4%E3%82%BA.html" target="ContentFrame">サイズ</a></li>
+                           <li id="サービス"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9.html" target="ContentFrame">サービス</a></li>
+                           <li id="シリアル番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E7%95%AA%E5%8F%B7.html" target="ContentFrame">シリアル番号</a></li>
+                           <li id="バリアフリー"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%90%E3%83%AA%E3%82%A2%E3%83%95%E3%83%AA%E3%83%BC.html" target="ContentFrame">バリアフリー</a></li>
+                           <li id="バージョン"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3.html" target="ContentFrame">バージョン</a></li>
+                           <li id="ビル名"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%93%E3%83%AB%E5%90%8D.html" target="ContentFrame">ビル名</a></li>
+                           <li id="ビル番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%93%E3%83%AB%E7%95%AA%E5%8F%B7.html" target="ContentFrame">ビル番号</a></li>
+                           <li id="ミドルネーム"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%9F%E3%83%89%E3%83%AB%E3%83%8D%E3%83%BC%E3%83%A0.html" target="ContentFrame">ミドルネーム</a></li>
+                           <li id="ミドルネームカナ表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%9F%E3%83%89%E3%83%AB%E3%83%8D%E3%83%BC%E3%83%A0%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98.html" target="ContentFrame">ミドルネームカナ表記</a></li>
+                           <li id="ミドルネームローマ字表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%9F%E3%83%89%E3%83%AB%E3%83%8D%E3%83%BC%E3%83%A0%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98.html" target="ContentFrame">ミドルネームローマ字表記</a></li>
+                           <li id="メタデータ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%A1%E3%82%BF%E3%83%87%E3%83%BC%E3%82%BF.html" target="ContentFrame">メタデータ</a></li>
+                           <li id="ロット番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%AD%E3%83%83%E3%83%88%E7%95%AA%E5%8F%B7.html" target="ContentFrame">ロット番号</a></li>
+                           <li id="ローマ字表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98.html" target="ContentFrame">ローマ字表記</a></li>
+                           <li id="丁目"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%81%E7%9B%AE.html" target="ContentFrame">丁目</a></li>
+                           <li id="上位コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%8A%E4%BD%8D%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">上位コード</a></li>
+                           <li id="上限値"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%8A%E9%99%90%E5%80%A4.html" target="ContentFrame">上限値</a></li>
+                           <li id="下位コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%8B%E4%BD%8D%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">下位コード</a></li>
+                           <li id="下限値"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%8B%E9%99%90%E5%80%A4.html" target="ContentFrame">下限値</a></li>
+                           <li id="主要用途"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%BB%E8%A6%81%E7%94%A8%E9%80%94.html" target="ContentFrame">主要用途</a></li>
+                           <li id="乗数"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B9%97%E6%95%B0.html" target="ContentFrame">乗数</a></li>
+                           <li id="事業年度開始日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%8B%E6%A5%AD%E5%B9%B4%E5%BA%A6%E9%96%8B%E5%A7%8B%E6%97%A5.html" target="ContentFrame">事業年度開始日</a></li>
+                           <li id="事業種目"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%8B%E6%A5%AD%E7%A8%AE%E7%9B%AE.html" target="ContentFrame">事業種目</a></li>
+                           <li id="事物"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%8B%E7%89%A9.html" target="ContentFrame">事物</a></li>
+                           <li id="人"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%BA.html" target="ContentFrame">人</a></li>
+                           <li id="人数"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%BA%E6%95%B0.html" target="ContentFrame">人数</a></li>
+                           <li id="代理人"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BB%A3%E7%90%86%E4%BA%BA.html" target="ContentFrame">代理人</a></li>
+                           <li id="代表者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BB%A3%E8%A1%A8%E8%80%85.html" target="ContentFrame">代表者</a></li>
+                           <li id="住所"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%8F%E6%89%80.html" target="ContentFrame">住所</a></li>
+                           <li id="住所コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%8F%E6%89%80%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">住所コード</a></li>
+                           <li id="体系"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%93%E7%B3%BB.html" target="ContentFrame">体系</a></li>
+                           <li id="体重"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%93%E9%87%8D.html" target="ContentFrame">体重</a></li>
+                           <li id="作成者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%9C%E6%88%90%E8%80%85.html" target="ContentFrame">作成者</a></li>
+                           <li id="使用方法"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.html" target="ContentFrame">使用方法</a></li>
+                           <li id="使用期限"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%BF%E7%94%A8%E6%9C%9F%E9%99%90.html" target="ContentFrame">使用期限</a></li>
+                           <li id="価格"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BE%A1%E6%A0%BC.html" target="ContentFrame">価格</a></li>
+                           <li id="備考"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%82%99%E8%80%83.html" target="ContentFrame">備考</a></li>
+                           <li id="入数"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%85%A5%E6%95%B0.html" target="ContentFrame">入数</a></li>
+                           <li id="内線番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%86%85%E7%B7%9A%E7%95%AA%E5%8F%B7.html" target="ContentFrame">内線番号</a></li>
+                           <li id="出処"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%87%BA%E5%87%A6.html" target="ContentFrame">出処</a></li>
+                           <li id="出生国"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%87%BA%E7%94%9F%E5%9B%BD.html" target="ContentFrame">出生国</a></li>
+                           <li id="出生国コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%87%BA%E7%94%9F%E5%9B%BD%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">出生国コード</a></li>
+                           <li id="出生地"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%87%BA%E7%94%9F%E5%9C%B0.html" target="ContentFrame">出生地</a></li>
+                           <li id="分"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%86.html" target="ContentFrame">分</a></li>
+                           <li id="利用可能時間"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%A9%E7%94%A8%E5%8F%AF%E8%83%BD%E6%99%82%E9%96%93.html" target="ContentFrame">利用可能時間</a></li>
+                           <li id="利用対象"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%A9%E7%94%A8%E5%AF%BE%E8%B1%A1.html" target="ContentFrame">利用対象</a></li>
+                           <li id="利用方法"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95.html" target="ContentFrame">利用方法</a></li>
+                           <li id="利用者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%A9%E7%94%A8%E8%80%85.html" target="ContentFrame">利用者</a></li>
+                           <li id="制約"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%B6%E7%B4%84.html" target="ContentFrame">制約</a></li>
+                           <li id="制約コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%B6%E7%B4%84%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">制約コード</a></li>
+                           <li id="制約対象"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%B6%E7%B4%84%E5%AF%BE%E8%B1%A1.html" target="ContentFrame">制約対象</a></li>
+                           <li id="区"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8C%BA.html" target="ContentFrame">区</a></li>
+                           <li id="単位"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8D%98%E4%BD%8D.html" target="ContentFrame">単位</a></li>
+                           <li id="単位コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8D%98%E4%BD%8D%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">単位コード</a></li>
+                           <li id="単位表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8D%98%E4%BD%8D%E8%A1%A8%E8%A8%98.html" target="ContentFrame">単位表記</a></li>
+                           <li id="原産国"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8E%9F%E7%94%A3%E5%9B%BD.html" target="ContentFrame">原産国</a></li>
+                           <li id="原産国コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8E%9F%E7%94%A3%E5%9B%BD%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">原産国コード</a></li>
+                           <li id="参加方法"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%82%E5%8A%A0%E6%96%B9%E6%B3%95.html" target="ContentFrame">参加方法</a></li>
+                           <li id="参照"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%82%E7%85%A7.html" target="ContentFrame">参照</a></li>
+                           <li id="参照先"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%82%E7%85%A7%E5%85%88.html" target="ContentFrame">参照先</a></li>
+                           <li id="収容人数"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%8E%E5%AE%B9%E4%BA%BA%E6%95%B0.html" target="ContentFrame">収容人数</a></li>
+                           <li id="収容台数"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%8E%E5%AE%B9%E5%8F%B0%E6%95%B0.html" target="ContentFrame">収容台数</a></li>
+                           <li id="号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%B7.html" target="ContentFrame">号</a></li>
+                           <li id="名"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D.html" target="ContentFrame">名</a></li>
+                           <li id="名カナ表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98.html" target="ContentFrame">名カナ表記</a></li>
+                           <li id="名ローマ字表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98.html" target="ContentFrame">名ローマ字表記</a></li>
+                           <li id="名称"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D%E7%A7%B0.html" target="ContentFrame">名称</a></li>
+                           <li id="国"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9B%BD.html" target="ContentFrame">国</a></li>
+                           <li id="国コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9B%BD%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">国コード</a></li>
+                           <li id="国籍"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9B%BD%E7%B1%8D.html" target="ContentFrame">国籍</a></li>
+                           <li id="国籍コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9B%BD%E7%B1%8D%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">国籍コード</a></li>
+                           <li id="土地"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%9F%E5%9C%B0.html" target="ContentFrame">土地</a></li>
+                           <li id="地上階数"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E4%B8%8A%E9%9A%8E%E6%95%B0.html" target="ContentFrame">地上階数</a></li>
+                           <li id="地下階数"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E4%B8%8B%E9%9A%8E%E6%95%B0.html" target="ContentFrame">地下階数</a></li>
+                           <li id="地図"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E5%9B%B3.html" target="ContentFrame">地図</a></li>
+                           <li id="地物"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E7%89%A9.html" target="ContentFrame">地物</a></li>
+                           <li id="地理座標"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E7%90%86%E5%BA%A7%E6%A8%99.html" target="ContentFrame">地理座標</a></li>
+                           <li id="地理識別子"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E7%90%86%E8%AD%98%E5%88%A5%E5%AD%90.html" target="ContentFrame">地理識別子</a></li>
+                           <li id="場所"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A0%B4%E6%89%80.html" target="ContentFrame">場所</a></li>
+                           <li id="境界を含まない上限値"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A2%83%E7%95%8C%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E4%B8%8A%E9%99%90%E5%80%A4.html" target="ContentFrame">境界を含まない上限値</a></li>
+                           <li id="境界を含まない下限値"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A2%83%E7%95%8C%E3%82%92%E5%90%AB%E3%81%BE%E3%81%AA%E3%81%84%E4%B8%8B%E9%99%90%E5%80%A4.html" target="ContentFrame">境界を含まない下限値</a></li>
+                           <li id="外部利用可否"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A4%96%E9%83%A8%E5%88%A9%E7%94%A8%E5%8F%AF%E5%90%A6.html" target="ContentFrame">外部利用可否</a></li>
+                           <li id="始点"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%8B%E7%82%B9.html" target="ContentFrame">始点</a></li>
+                           <li id="始点備考"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%8B%E7%82%B9%E5%82%99%E8%80%83.html" target="ContentFrame">始点備考</a></li>
+                           <li id="姓"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93.html" target="ContentFrame">姓</a></li>
+                           <li id="姓カナ表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98.html" target="ContentFrame">姓カナ表記</a></li>
+                           <li id="姓ローマ字表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98.html" target="ContentFrame">姓ローマ字表記</a></li>
+                           <li id="姓名"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E5%90%8D.html" target="ContentFrame">姓名</a></li>
+                           <li id="姓名カナ表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E5%90%8D%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98.html" target="ContentFrame">姓名カナ表記</a></li>
+                           <li id="姓名ローマ字表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E5%90%8D%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98.html" target="ContentFrame">姓名ローマ字表記</a></li>
+                           <li id="定期スケジュール"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%9A%E6%9C%9F%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB.html" target="ContentFrame">定期スケジュール</a></li>
+                           <li id="実体"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%9F%E4%BD%93.html" target="ContentFrame">実体</a></li>
+                           <li id="容量"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%B9%E9%87%8F.html" target="ContentFrame">容量</a></li>
+                           <li id="寄与者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AF%84%E4%B8%8E%E8%80%85.html" target="ContentFrame">寄与者</a></li>
+                           <li id="対応言語"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AF%BE%E5%BF%9C%E8%A8%80%E8%AA%9E.html" target="ContentFrame">対応言語</a></li>
+                           <li id="対象"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AF%BE%E8%B1%A1.html" target="ContentFrame">対象</a></li>
+                           <li id="市区町村"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B8%82%E5%8C%BA%E7%94%BA%E6%9D%91.html" target="ContentFrame">市区町村</a></li>
+                           <li id="市区町村コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B8%82%E5%8C%BA%E7%94%BA%E6%9D%91%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">市区町村コード</a></li>
+                           <li id="幅"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B9%85.html" target="ContentFrame">幅</a></li>
+                           <li id="年"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B9%B4.html" target="ContentFrame">年</a></li>
+                           <li id="年号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B9%B4%E5%8F%B7.html" target="ContentFrame">年号</a></li>
+                           <li id="年齢"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B9%B4%E9%BD%A2.html" target="ContentFrame">年齢</a></li>
+                           <li id="座標"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BA%A7%E6%A8%99.html" target="ContentFrame">座標</a></li>
+                           <li id="座標データ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BA%A7%E6%A8%99%E3%83%87%E3%83%BC%E3%82%BF.html" target="ContentFrame">座標データ</a></li>
+                           <li id="座標データ書式"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BA%A7%E6%A8%99%E3%83%87%E3%83%BC%E3%82%BF%E6%9B%B8%E5%BC%8F.html" target="ContentFrame">座標データ書式</a></li>
+                           <li id="座標参照系"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BA%A7%E6%A8%99%E5%8F%82%E7%85%A7%E7%B3%BB.html" target="ContentFrame">座標参照系</a></li>
+                           <li id="延べ面積"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BB%B6%E3%81%B9%E9%9D%A2%E7%A9%8D.html" target="ContentFrame">延べ面積</a></li>
+                           <li id="建物"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BB%BA%E7%89%A9.html" target="ContentFrame">建物</a></li>
+                           <li id="建築面積"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BB%BA%E7%AF%89%E9%9D%A2%E7%A9%8D.html" target="ContentFrame">建築面積</a></li>
+                           <li id="形態"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BD%A2%E6%85%8B.html" target="ContentFrame">形態</a></li>
+                           <li id="役割"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BD%B9%E5%89%B2.html" target="ContentFrame">役割</a></li>
+                           <li id="役割コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BD%B9%E5%89%B2%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">役割コード</a></li>
+                           <li id="性別"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%80%A7%E5%88%A5.html" target="ContentFrame">性別</a></li>
+                           <li id="性別コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%80%A7%E5%88%A5%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">性別コード</a></li>
+                           <li id="所有者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%89%80%E6%9C%89%E8%80%85.html" target="ContentFrame">所有者</a></li>
+                           <li id="担当者名"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%8B%85%E5%BD%93%E8%80%85%E5%90%8D.html" target="ContentFrame">担当者名</a></li>
+                           <li id="担当者役職"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%8B%85%E5%BD%93%E8%80%85%E5%BD%B9%E8%81%B7.html" target="ContentFrame">担当者役職</a></li>
+                           <li id="提供者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%8F%90%E4%BE%9B%E8%80%85.html" target="ContentFrame">提供者</a></li>
+                           <li id="携帯電話番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%90%BA%E5%B8%AF%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7.html" target="ContentFrame">携帯電話番号</a></li>
+                           <li id="数値"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%95%B0%E5%80%A4.html" target="ContentFrame">数値</a></li>
+                           <li id="数量"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%95%B0%E9%87%8F.html" target="ContentFrame">数量</a></li>
+                           <li id="敷地面積"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%95%B7%E5%9C%B0%E9%9D%A2%E7%A9%8D.html" target="ContentFrame">敷地面積</a></li>
+                           <li id="文書"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%87%E6%9B%B8.html" target="ContentFrame">文書</a></li>
+                           <li id="料金"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%99%E9%87%91.html" target="ContentFrame">料金</a></li>
+                           <li id="方書"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%B9%E6%9B%B8.html" target="ContentFrame">方書</a></li>
+                           <li id="施設"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%BD%E8%A8%AD.html" target="ContentFrame">施設</a></li>
+                           <li id="施設関連"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%BD%E8%A8%AD%E9%96%A2%E9%80%A3.html" target="ContentFrame">施設関連</a></li>
+                           <li id="日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5.html" target="ContentFrame">日</a></li>
+                           <li id="日付"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5%E4%BB%98.html" target="ContentFrame">日付</a></li>
+                           <li id="日時"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5%E6%99%82.html" target="ContentFrame">日時</a></li>
+                           <li id="時"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%99%82.html" target="ContentFrame">時</a></li>
+                           <li id="時間"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%99%82%E9%96%93.html" target="ContentFrame">時間</a></li>
+                           <li id="時間帯"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%99%82%E9%96%93%E5%B8%AF.html" target="ContentFrame">時間帯</a></li>
+                           <li id="最高の高さ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%80%E9%AB%98%E3%81%AE%E9%AB%98%E3%81%95.html" target="ContentFrame">最高の高さ</a></li>
+                           <li id="月"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%88.html" target="ContentFrame">月</a></li>
+                           <li id="有効終了日時"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%89%E5%8A%B9%E7%B5%82%E4%BA%86%E6%97%A5%E6%99%82.html" target="ContentFrame">有効終了日時</a></li>
+                           <li id="有効開始日時"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%89%E5%8A%B9%E9%96%8B%E5%A7%8B%E6%97%A5%E6%99%82.html" target="ContentFrame">有効開始日時</a></li>
+                           <li id="期間"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93.html" target="ContentFrame">期間</a></li>
+                           <li id="期間スケジュール"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB.html" target="ContentFrame">期間スケジュール</a></li>
+                           <li id="期間制約"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93%E5%88%B6%E7%B4%84.html" target="ContentFrame">期間制約</a></li>
+                           <li id="本籍"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%AC%E7%B1%8D.html" target="ContentFrame">本籍</a></li>
+                           <li id="業務組織"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A5%AD%E5%8B%99%E7%B5%84%E7%B9%94.html" target="ContentFrame">業務組織</a></li>
+                           <li id="概念"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A6%82%E5%BF%B5.html" target="ContentFrame">概念</a></li>
+                           <li id="概要"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A6%82%E8%A6%81.html" target="ContentFrame">概要</a></li>
+                           <li id="構成員"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A7%8B%E6%88%90%E5%93%A1.html" target="ContentFrame">構成員</a></li>
+                           <li id="構造"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A7%8B%E9%80%A0.html" target="ContentFrame">構造</a></li>
+                           <li id="標準型日付"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A8%99%E6%BA%96%E5%9E%8B%E6%97%A5%E4%BB%98.html" target="ContentFrame">標準型日付</a></li>
+                           <li id="標準型日時"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A8%99%E6%BA%96%E5%9E%8B%E6%97%A5%E6%99%82.html" target="ContentFrame">標準型日時</a></li>
+                           <li id="権利管理"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A8%A9%E5%88%A9%E7%AE%A1%E7%90%86.html" target="ContentFrame">権利管理</a></li>
+                           <li id="死亡年月日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%AD%BB%E4%BA%A1%E5%B9%B4%E6%9C%88%E6%97%A5.html" target="ContentFrame">死亡年月日</a></li>
+                           <li id="氏名"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B0%8F%E5%90%8D.html" target="ContentFrame">氏名</a></li>
+                           <li id="法人"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B3%95%E4%BA%BA.html" target="ContentFrame">法人</a></li>
+                           <li id="活動"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B4%BB%E5%8B%95.html" target="ContentFrame">活動</a></li>
+                           <li id="活動状況"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B4%BB%E5%8B%95%E7%8A%B6%E6%B3%81.html" target="ContentFrame">活動状況</a></li>
+                           <li id="消費期限"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B6%88%E8%B2%BB%E6%9C%9F%E9%99%90.html" target="ContentFrame">消費期限</a></li>
+                           <li id="測地高度"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B8%AC%E5%9C%B0%E9%AB%98%E5%BA%A6.html" target="ContentFrame">測地高度</a></li>
+                           <li id="状態"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%8A%B6%E6%85%8B.html" target="ContentFrame">状態</a></li>
+                           <li id="状況"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%8A%B6%E6%B3%81.html" target="ContentFrame">状況</a></li>
+                           <li id="生年月日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%94%9F%E5%B9%B4%E6%9C%88%E6%97%A5.html" target="ContentFrame">生年月日</a></li>
+                           <li id="町名"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%94%BA%E5%90%8D.html" target="ContentFrame">町名</a></li>
+                           <li id="画像"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%94%BB%E5%83%8F.html" target="ContentFrame">画像</a></li>
+                           <li id="略称アルファベット"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%95%A5%E7%A7%B0%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%99%E3%83%83%E3%83%88.html" target="ContentFrame">略称アルファベット</a></li>
+                           <li id="番地"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%95%AA%E5%9C%B0.html" target="ContentFrame">番地</a></li>
+                           <li id="番地補足"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%95%AA%E5%9C%B0%E8%A3%9C%E8%B6%B3.html" target="ContentFrame">番地補足</a></li>
+                           <li id="発生日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%99%BA%E7%94%9F%E6%97%A5.html" target="ContentFrame">発生日</a></li>
+                           <li id="発行者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%99%BA%E8%A1%8C%E8%80%85.html" target="ContentFrame">発行者</a></li>
+                           <li id="秒"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%A7%92.html" target="ContentFrame">秒</a></li>
+                           <li id="種別"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%A8%AE%E5%88%A5.html" target="ContentFrame">種別</a></li>
+                           <li id="種別コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%A8%AE%E5%88%A5%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">種別コード</a></li>
+                           <li id="竣工日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%AB%A3%E5%B7%A5%E6%97%A5.html" target="ContentFrame">竣工日</a></li>
+                           <li id="管理者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%AE%A1%E7%90%86%E8%80%85.html" target="ContentFrame">管理者</a></li>
+                           <li id="範囲制約"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%AF%84%E5%9B%B2%E5%88%B6%E7%B4%84.html" target="ContentFrame">範囲制約</a></li>
+                           <li id="終了日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%82%E4%BA%86%E6%97%A5.html" target="ContentFrame">終了日</a></li>
+                           <li id="終了日時"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%82%E4%BA%86%E6%97%A5%E6%99%82.html" target="ContentFrame">終了日時</a></li>
+                           <li id="終了時間"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%82%E4%BA%86%E6%99%82%E9%96%93.html" target="ContentFrame">終了時間</a></li>
+                           <li id="終点"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%82%E7%82%B9.html" target="ContentFrame">終点</a></li>
+                           <li id="終点備考"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%82%E7%82%B9%E5%82%99%E8%80%83.html" target="ContentFrame">終点備考</a></li>
+                           <li id="組織"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94.html" target="ContentFrame">組織</a></li>
+                           <li id="組織種別"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E7%A8%AE%E5%88%A5.html" target="ContentFrame">組織種別</a></li>
+                           <li id="組織種別位置"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E7%A8%AE%E5%88%A5%E4%BD%8D%E7%BD%AE.html" target="ContentFrame">組織種別位置</a></li>
+                           <li id="組織関連"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E9%96%A2%E9%80%A3.html" target="ContentFrame">組織関連</a></li>
+                           <li id="経度"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%8C%E5%BA%A6.html" target="ContentFrame">経度</a></li>
+                           <li id="緯度"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B7%AF%E5%BA%A6.html" target="ContentFrame">緯度</a></li>
+                           <li id="緯度経度書式"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B7%AF%E5%BA%A6%E7%B5%8C%E5%BA%A6%E6%9B%B8%E5%BC%8F.html" target="ContentFrame">緯度経度書式</a></li>
+                           <li id="自動認識id"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%87%AA%E5%8B%95%E8%AA%8D%E8%AD%98id.html" target="ContentFrame">自動認識ID</a></li>
+                           <li id="色"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%89%B2.html" target="ContentFrame">色</a></li>
+                           <li id="表記"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A1%A8%E8%A8%98.html" target="ContentFrame">表記</a></li>
+                           <li id="表題"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A1%A8%E9%A1%8C.html" target="ContentFrame">表題</a></li>
+                           <li id="製品"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E5%93%81.html" target="ContentFrame">製品</a></li>
+                           <li id="製品個品"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E5%93%81%E5%80%8B%E5%93%81.html" target="ContentFrame">製品個品</a></li>
+                           <li id="製造日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E9%80%A0%E6%97%A5.html" target="ContentFrame">製造日</a></li>
+                           <li id="製造者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E9%80%A0%E8%80%85.html" target="ContentFrame">製造者</a></li>
+                           <li id="製造者id"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E9%80%A0%E8%80%85id.html" target="ContentFrame">製造者ID</a></li>
+                           <li id="要約"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A6%81%E7%B4%84.html" target="ContentFrame">要約</a></li>
+                           <li id="規制情報"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A6%8F%E5%88%B6%E6%83%85%E5%A0%B1.html" target="ContentFrame">規制情報</a></li>
+                           <li id="言語"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%80%E8%AA%9E.html" target="ContentFrame">言語</a></li>
+                           <li id="記述"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%98%E8%BF%B0.html" target="ContentFrame">記述</a></li>
+                           <li id="記録形式"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%98%E9%8C%B2%E5%BD%A2%E5%BC%8F.html" target="ContentFrame">記録形式</a></li>
+                           <li id="記録形式コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%98%E9%8C%B2%E5%BD%A2%E5%BC%8F%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">記録形式コード</a></li>
+                           <li id="設備"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E5%82%99.html" target="ContentFrame">設備</a></li>
+                           <li id="設立日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E7%AB%8B%E6%97%A5.html" target="ContentFrame">設立日</a></li>
+                           <li id="設置位置"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E7%BD%AE%E4%BD%8D%E7%BD%AE.html" target="ContentFrame">設置位置</a></li>
+                           <li id="設置地点"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E7%BD%AE%E5%9C%B0%E7%82%B9.html" target="ContentFrame">設置地点</a></li>
+                           <li id="設置日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E7%BD%AE%E6%97%A5.html" target="ContentFrame">設置日</a></li>
+                           <li id="設置者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E7%BD%AE%E8%80%85.html" target="ContentFrame">設置者</a></li>
+                           <li id="詳細スケジュール"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A9%B3%E7%B4%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB.html" target="ContentFrame">詳細スケジュール</a></li>
+                           <li id="詳細スケジュール規則"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A9%B3%E7%B4%B0%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E8%A6%8F%E5%89%87.html" target="ContentFrame">詳細スケジュール規則</a></li>
+                           <li id="説明"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%AA%AC%E6%98%8E.html" target="ContentFrame">説明</a></li>
+                           <li id="識別値"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%AD%98%E5%88%A5%E5%80%A4.html" target="ContentFrame">識別値</a></li>
+                           <li id="販売業者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B2%A9%E5%A3%B2%E6%A5%AD%E8%80%85.html" target="ContentFrame">販売業者</a></li>
+                           <li id="販売業者id"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B2%A9%E5%A3%B2%E6%A5%AD%E8%80%85id.html" target="ContentFrame">販売業者ID</a></li>
+                           <li id="資本金"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B3%87%E6%9C%AC%E9%87%91.html" target="ContentFrame">資本金</a></li>
+                           <li id="資源タイプ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B3%87%E6%BA%90%E3%82%BF%E3%82%A4%E3%83%97.html" target="ContentFrame">資源タイプ</a></li>
+                           <li id="賞味期限"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B3%9E%E5%91%B3%E6%9C%9F%E9%99%90.html" target="ContentFrame">賞味期限</a></li>
+                           <li id="購入価格"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B3%BC%E5%85%A5%E4%BE%A1%E6%A0%BC.html" target="ContentFrame">購入価格</a></li>
+                           <li id="路線"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B7%AF%E7%B7%9A.html" target="ContentFrame">路線</a></li>
+                           <li id="身長"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%BA%AB%E9%95%B7.html" target="ContentFrame">身長</a></li>
+                           <li id="送付先"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%81%E4%BB%98%E5%85%88.html" target="ContentFrame">送付先</a></li>
+                           <li id="通称"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%9A%E7%A7%B0.html" target="ContentFrame">通称</a></li>
+                           <li id="通貨"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%9A%E8%B2%A8.html" target="ContentFrame">通貨</a></li>
+                           <li id="通貨コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%9A%E8%B2%A8%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">通貨コード</a></li>
+                           <li id="連絡先"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%A3%E7%B5%A1%E5%85%88.html" target="ContentFrame">連絡先</a></li>
+                           <li id="部屋番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%83%A8%E5%B1%8B%E7%95%AA%E5%8F%B7.html" target="ContentFrame">部屋番号</a></li>
+                           <li id="郵便番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%83%B5%E4%BE%BF%E7%95%AA%E5%8F%B7.html" target="ContentFrame">郵便番号</a></li>
+                           <li id="都道府県"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C.html" target="ContentFrame">都道府県</a></li>
+                           <li id="都道府県コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">都道府県コード</a></li>
+                           <li id="重量"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%8D%E9%87%8F.html" target="ContentFrame">重量</a></li>
+                           <li id="量種別"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%8F%E7%A8%AE%E5%88%A5.html" target="ContentFrame">量種別</a></li>
+                           <li id="金額"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%91%E9%A1%8D.html" target="ContentFrame">金額</a></li>
+                           <li id="長さ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%95%B7%E3%81%95.html" target="ContentFrame">長さ</a></li>
+                           <li id="開催場所"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%82%AC%E5%A0%B4%E6%89%80.html" target="ContentFrame">開催場所</a></li>
+                           <li id="開催日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%82%AC%E6%97%A5.html" target="ContentFrame">開催日</a></li>
+                           <li id="開催期日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%82%AC%E6%9C%9F%E6%97%A5.html" target="ContentFrame">開催期日</a></li>
+                           <li id="開始日"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%A7%8B%E6%97%A5.html" target="ContentFrame">開始日</a></li>
+                           <li id="開始日時"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%A7%8B%E6%97%A5%E6%99%82.html" target="ContentFrame">開始日時</a></li>
+                           <li id="開始時間"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%A7%8B%E6%99%82%E9%96%93.html" target="ContentFrame">開始時間</a></li>
+                           <li id="関与"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E4%B8%8E.html" target="ContentFrame">関与</a></li>
+                           <li id="関与者"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E4%B8%8E%E8%80%85.html" target="ContentFrame">関与者</a></li>
+                           <li id="関連イベント"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E9%80%A3%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88.html" target="ContentFrame">関連イベント</a></li>
+                           <li id="関連コード"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E9%80%A3%E3%82%B3%E3%83%BC%E3%83%89.html" target="ContentFrame">関連コード</a></li>
+                           <li id="関連人員"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E9%80%A3%E4%BA%BA%E5%93%A1.html" target="ContentFrame">関連人員</a></li>
+                           <li id="関連施設"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E9%80%A3%E6%96%BD%E8%A8%AD.html" target="ContentFrame">関連施設</a></li>
+                           <li id="関連組織"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E9%80%A3%E7%B5%84%E7%B9%94.html" target="ContentFrame">関連組織</a></li>
+                           <li id="電話番号"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7.html" target="ContentFrame">電話番号</a></li>
+                           <li id="面積"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%9D%A2%E7%A9%8D.html" target="ContentFrame">面積</a></li>
+                           <li id="駐車場"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%A7%90%E8%BB%8A%E5%A0%B4.html" target="ContentFrame">駐車場</a></li>
+                           <li id="駐車場種別"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%A7%90%E8%BB%8A%E5%A0%B4%E7%A8%AE%E5%88%A5.html" target="ContentFrame">駐車場種別</a></li>
+                           <li id="高さ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%AB%98%E3%81%95.html" target="ContentFrame">高さ</a></li>
+                        </ul>
+                     </li>
+                     <li id="Group" class="parent"><a href="javascript:toggleNode('Group')"><img height="11" width="11" src="images/plus.gif"></img>Group</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="id体系型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="id%E4%BD%93%E7%B3%BB%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">ID体系型-固有要素グループ</a></li>
+                           <li id="id型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="id%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">ID型-固有要素グループ</a></li>
+                           <li id="アクセス区間型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%8C%BA%E9%96%93%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">アクセス区間型-固有要素グループ</a></li>
+                           <li id="アクセス型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">アクセス型-固有要素グループ</a></li>
+                           <li id="イベントスケジュール型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">イベントスケジュール型-固有要素グループ</a></li>
+                           <li id="イベント型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">イベント型-固有要素グループ</a></li>
+                           <li id="コードリスト型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%88%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">コードリスト型-固有要素グループ</a></li>
+                           <li id="コード制約型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E5%88%B6%E7%B4%84%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">コード制約型-固有要素グループ</a></li>
+                           <li id="コード型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B3%E3%83%BC%E3%83%89%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">コード型-固有要素グループ</a></li>
+                           <li id="サービス型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">サービス型-固有要素グループ</a></li>
+                           <li id="事物型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%8B%E7%89%A9%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">事物型-固有要素グループ</a></li>
+                           <li id="人型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%BA%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">人型-固有要素グループ</a></li>
+                           <li id="人数型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%BA%E6%95%B0%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">人数型-固有要素グループ</a></li>
+                           <li id="住所型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%8F%E6%89%80%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">住所型-固有要素グループ</a></li>
+                           <li id="価格型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BE%A1%E6%A0%BC%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">価格型-固有要素グループ</a></li>
+                           <li id="制約型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%B6%E7%B4%84%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">制約型-固有要素グループ</a></li>
+                           <li id="単位コード型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8D%98%E4%BD%8D%E3%82%B3%E3%83%BC%E3%83%89%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">単位コード型-固有要素グループ</a></li>
+                           <li id="参照型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%82%E7%85%A7%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">参照型-固有要素グループ</a></li>
+                           <li id="名称型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D%E7%A7%B0%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">名称型-固有要素グループ</a></li>
+                           <li id="土地型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%9F%E5%9C%B0%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">土地型-固有要素グループ</a></li>
+                           <li id="地物型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E7%89%A9%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">地物型-固有要素グループ</a></li>
+                           <li id="場所型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A0%B4%E6%89%80%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">場所型-固有要素グループ</a></li>
+                           <li id="定期スケジュール型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%9A%E6%9C%9F%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">定期スケジュール型-固有要素グループ</a></li>
+                           <li id="容量型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AE%B9%E9%87%8F%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">容量型-固有要素グループ</a></li>
+                           <li id="対象型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AF%BE%E8%B1%A1%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">対象型-固有要素グループ</a></li>
+                           <li id="座標型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BA%A7%E6%A8%99%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">座標型-固有要素グループ</a></li>
+                           <li id="建物型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BB%BA%E7%89%A9%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">建物型-固有要素グループ</a></li>
+                           <li id="数量型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%95%B0%E9%87%8F%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">数量型-固有要素グループ</a></li>
+                           <li id="文書型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%87%E6%9B%B8%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">文書型-固有要素グループ</a></li>
+                           <li id="施設型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%BD%E8%A8%AD%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">施設型-固有要素グループ</a></li>
+                           <li id="施設関連型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%BD%E8%A8%AD%E9%96%A2%E9%80%A3%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">施設関連型-固有要素グループ</a></li>
+                           <li id="日付型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5%E4%BB%98%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">日付型-固有要素グループ</a></li>
+                           <li id="日時型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5%E6%99%82%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">日時型-固有要素グループ</a></li>
+                           <li id="期間制約型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93%E5%88%B6%E7%B4%84%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">期間制約型-固有要素グループ</a></li>
+                           <li id="期間型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%9F%E9%96%93%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">期間型-固有要素グループ</a></li>
+                           <li id="業務組織型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A5%AD%E5%8B%99%E7%B5%84%E7%B9%94%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">業務組織型-固有要素グループ</a></li>
+                           <li id="概念型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A6%82%E5%BF%B5%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">概念型-固有要素グループ</a></li>
+                           <li id="構成員型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A7%8B%E6%88%90%E5%93%A1%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">構成員型-固有要素グループ</a></li>
+                           <li id="氏名型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B0%8F%E5%90%8D%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">氏名型-固有要素グループ</a></li>
+                           <li id="法人型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B3%95%E4%BA%BA%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">法人型-固有要素グループ</a></li>
+                           <li id="活動型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%B4%BB%E5%8B%95%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">活動型-固有要素グループ</a></li>
+                           <li id="状況型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%8A%B6%E6%B3%81%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">状況型-固有要素グループ</a></li>
+                           <li id="範囲制約型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%AF%84%E5%9B%B2%E5%88%B6%E7%B4%84%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">範囲制約型-固有要素グループ</a></li>
+                           <li id="組織型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">組織型-固有要素グループ</a></li>
+                           <li id="組織関連型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E9%96%A2%E9%80%A3%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">組織関連型-固有要素グループ</a></li>
+                           <li id="製品個品型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E5%93%81%E5%80%8B%E5%93%81%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">製品個品型-固有要素グループ</a></li>
+                           <li id="製品型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E5%93%81%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">製品型-固有要素グループ</a></li>
+                           <li id="記述型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%98%E8%BF%B0%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">記述型-固有要素グループ</a></li>
+                           <li id="設備型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E5%82%99%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">設備型-固有要素グループ</a></li>
+                           <li id="連絡先型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%A3%E7%B5%A1%E5%85%88%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">連絡先型-固有要素グループ</a></li>
+                           <li id="重量型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%8D%E9%87%8F%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">重量型-固有要素グループ</a></li>
+                           <li id="金額型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%91%E9%A1%8D%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">金額型-固有要素グループ</a></li>
+                           <li id="長さ型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%95%B7%E3%81%95%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">長さ型-固有要素グループ</a></li>
+                           <li id="関与型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%A2%E4%B8%8E%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">関与型-固有要素グループ</a></li>
+                           <li id="面積型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%9D%A2%E7%A9%8D%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">面積型-固有要素グループ</a></li>
+                           <li id="駐車場型-固有要素グループ"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%A7%90%E8%BB%8A%E5%A0%B4%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.html" target="ContentFrame">駐車場型-固有要素グループ</a></li>
+                        </ul>
+                     </li>
+                     <li id="SimpleType" class="parent"><a href="javascript:toggleNode('SimpleType')"><img height="11" width="11" src="images/plus.gif"></img>SimpleType</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="eメールアドレス-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="e%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">Eメールアドレス-単純型</a></li>
+                           <li id="iso3alphacurrencycodecontenttype"><a href="urn_un_unece_uncefact_codelist_standard_iso_iso3alphacurrencycode_2012-08-31.html" target="ContentFrame">uncefactISO4217</a>:
+                              <a href="iso3alphacurrencycodecontenttype.html" target="ContentFrame">ISO3AlphaCurrencyCodeContentType</a></li>
+                           <li id="webサイト-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="web%E3%82%B5%E3%82%A4%E3%83%88-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">Webサイト-単純型</a></li>
+                           <li id="カナ表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">カナ表記-単純型</a></li>
+                           <li id="キーワード-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">キーワード-単純型</a></li>
+                           <li id="サイズ-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%82%B5%E3%82%A4%E3%82%BA-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">サイズ-単純型</a></li>
+                           <li id="バリアフリー-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%90%E3%83%AA%E3%82%A2%E3%83%95%E3%83%AA%E3%83%BC-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">バリアフリー-単純型</a></li>
+                           <li id="バージョン-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">バージョン-単純型</a></li>
+                           <li id="ビル名-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%93%E3%83%AB%E5%90%8D-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">ビル名-単純型</a></li>
+                           <li id="ビル番号-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%93%E3%83%AB%E7%95%AA%E5%8F%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">ビル番号-単純型</a></li>
+                           <li id="ミドルネーム-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%9F%E3%83%89%E3%83%AB%E3%83%8D%E3%83%BC%E3%83%A0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">ミドルネーム-単純型</a></li>
+                           <li id="ミドルネームカナ表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%9F%E3%83%89%E3%83%AB%E3%83%8D%E3%83%BC%E3%83%A0%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">ミドルネームカナ表記-単純型</a></li>
+                           <li id="ミドルネームローマ字表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%9F%E3%83%89%E3%83%AB%E3%83%8D%E3%83%BC%E3%83%A0%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">ミドルネームローマ字表記-単純型</a></li>
+                           <li id="ロット番号-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%AD%E3%83%83%E3%83%88%E7%95%AA%E5%8F%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">ロット番号-単純型</a></li>
+                           <li id="ローマ字表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">ローマ字表記-単純型</a></li>
+                           <li id="丁目-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%81%E7%9B%AE-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">丁目-単純型</a></li>
+                           <li id="主要用途-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B8%BB%E8%A6%81%E7%94%A8%E9%80%94-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">主要用途-単純型</a></li>
+                           <li id="乗数-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%B9%97%E6%95%B0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">乗数-単純型</a></li>
+                           <li id="事業種目-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%8B%E6%A5%AD%E7%A8%AE%E7%9B%AE-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">事業種目-単純型</a></li>
+                           <li id="人数-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BA%BA%E6%95%B0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">人数-単純型</a></li>
+                           <li id="使用方法-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">使用方法-単純型</a></li>
+                           <li id="備考-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%82%99%E8%80%83-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">備考-単純型</a></li>
+                           <li id="内線番号-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%86%85%E7%B7%9A%E7%95%AA%E5%8F%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">内線番号-単純型</a></li>
+                           <li id="出処-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%87%BA%E5%87%A6-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">出処-単純型</a></li>
+                           <li id="出生国-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%87%BA%E7%94%9F%E5%9B%BD-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">出生国-単純型</a></li>
+                           <li id="分-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%86-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">分-単純型</a></li>
+                           <li id="利用方法-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%A9%E7%94%A8%E6%96%B9%E6%B3%95-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">利用方法-単純型</a></li>
+                           <li id="利用者-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%A9%E7%94%A8%E8%80%85-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">利用者-単純型</a></li>
+                           <li id="制約対象-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%88%B6%E7%B4%84%E5%AF%BE%E8%B1%A1-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">制約対象-単純型</a></li>
+                           <li id="区-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8C%BA-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">区-単純型</a></li>
+                           <li id="単位表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8D%98%E4%BD%8D%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">単位表記-単純型</a></li>
+                           <li id="原産国-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8E%9F%E7%94%A3%E5%9B%BD-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">原産国-単純型</a></li>
+                           <li id="参加方法-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%82%E5%8A%A0%E6%96%B9%E6%B3%95-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">参加方法-単純型</a></li>
+                           <li id="参照先-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%82%E7%85%A7%E5%85%88-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">参照先-単純型</a></li>
+                           <li id="収容台数-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%8E%E5%AE%B9%E5%8F%B0%E6%95%B0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">収容台数-単純型</a></li>
+                           <li id="号-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%8F%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">号-単純型</a></li>
+                           <li id="名-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">名-単純型</a></li>
+                           <li id="名カナ表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">名カナ表記-単純型</a></li>
+                           <li id="名ローマ字表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%90%8D%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">名ローマ字表記-単純型</a></li>
+                           <li id="国-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9B%BD-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">国-単純型</a></li>
+                           <li id="国籍-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9B%BD%E7%B1%8D-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">国籍-単純型</a></li>
+                           <li id="地上階数-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E4%B8%8A%E9%9A%8E%E6%95%B0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">地上階数-単純型</a></li>
+                           <li id="地下階数-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E4%B8%8B%E9%9A%8E%E6%95%B0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">地下階数-単純型</a></li>
+                           <li id="地図-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%9C%B0%E5%9B%B3-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">地図-単純型</a></li>
+                           <li id="外部利用可否-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A4%96%E9%83%A8%E5%88%A9%E7%94%A8%E5%8F%AF%E5%90%A6-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">外部利用可否-単純型</a></li>
+                           <li id="始点備考-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%8B%E7%82%B9%E5%82%99%E8%80%83-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">始点備考-単純型</a></li>
+                           <li id="姓-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">姓-単純型</a></li>
+                           <li id="姓カナ表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">姓カナ表記-単純型</a></li>
+                           <li id="姓ローマ字表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">姓ローマ字表記-単純型</a></li>
+                           <li id="姓名-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E5%90%8D-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">姓名-単純型</a></li>
+                           <li id="姓名カナ表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E5%90%8D%E3%82%AB%E3%83%8A%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">姓名カナ表記-単純型</a></li>
+                           <li id="姓名ローマ字表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%A7%93%E5%90%8D%E3%83%AD%E3%83%BC%E3%83%9E%E5%AD%97%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">姓名ローマ字表記-単純型</a></li>
+                           <li id="対応言語-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%AF%BE%E5%BF%9C%E8%A8%80%E8%AA%9E-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">対応言語-単純型</a></li>
+                           <li id="市区町村-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B8%82%E5%8C%BA%E7%94%BA%E6%9D%91-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">市区町村-単純型</a></li>
+                           <li id="年-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B9%B4-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">年-単純型</a></li>
+                           <li id="年号-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%B9%B4%E5%8F%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">年号-単純型</a></li>
+                           <li id="座標データ-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BA%A7%E6%A8%99%E3%83%87%E3%83%BC%E3%82%BF-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">座標データ-単純型</a></li>
+                           <li id="形態-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BD%A2%E6%85%8B-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">形態-単純型</a></li>
+                           <li id="役割-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E5%BD%B9%E5%89%B2-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">役割-単純型</a></li>
+                           <li id="性別-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%80%A7%E5%88%A5-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">性別-単純型</a></li>
+                           <li id="担当者役職-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%8B%85%E5%BD%93%E8%80%85%E5%BD%B9%E8%81%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">担当者役職-単純型</a></li>
+                           <li id="数値-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%95%B0%E5%80%A4-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">数値-単純型</a></li>
+                           <li id="方書-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%96%B9%E6%9B%B8-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">方書-単純型</a></li>
+                           <li id="日-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%97%A5-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">日-単純型</a></li>
+                           <li id="時-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%99%82-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">時-単純型</a></li>
+                           <li id="時間帯-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%99%82%E9%96%93%E5%B8%AF-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">時間帯-単純型</a></li>
+                           <li id="月-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%9C%88-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">月-単純型</a></li>
+                           <li id="概要-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A6%82%E8%A6%81-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">概要-単純型</a></li>
+                           <li id="構造-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A7%8B%E9%80%A0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">構造-単純型</a></li>
+                           <li id="標準型日付-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A8%99%E6%BA%96%E5%9E%8B%E6%97%A5%E4%BB%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">標準型日付-単純型</a></li>
+                           <li id="標準型日時-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E6%A8%99%E6%BA%96%E5%9E%8B%E6%97%A5%E6%99%82-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">標準型日時-単純型</a></li>
+                           <li id="状態-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%8A%B6%E6%85%8B-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">状態-単純型</a></li>
+                           <li id="町名-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%94%BA%E5%90%8D-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">町名-単純型</a></li>
+                           <li id="画像-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%94%BB%E5%83%8F-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">画像-単純型</a></li>
+                           <li id="略称アルファベット-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%95%A5%E7%A7%B0%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%83%99%E3%83%83%E3%83%88-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">略称アルファベット-単純型</a></li>
+                           <li id="番地-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%95%AA%E5%9C%B0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">番地-単純型</a></li>
+                           <li id="番地補足-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%95%AA%E5%9C%B0%E8%A3%9C%E8%B6%B3-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">番地補足-単純型</a></li>
+                           <li id="秒-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%A7%92-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">秒-単純型</a></li>
+                           <li id="種別-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%A8%AE%E5%88%A5-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">種別-単純型</a></li>
+                           <li id="終了時間-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%82%E4%BA%86%E6%99%82%E9%96%93-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">終了時間-単純型</a></li>
+                           <li id="終点備考-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%82%E7%82%B9%E5%82%99%E8%80%83-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">終点備考-単純型</a></li>
+                           <li id="組織種別位置-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%84%E7%B9%94%E7%A8%AE%E5%88%A5%E4%BD%8D%E7%BD%AE-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">組織種別位置-単純型</a></li>
+                           <li id="経度-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B5%8C%E5%BA%A6-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">経度-単純型</a></li>
+                           <li id="緯度-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B7%AF%E5%BA%A6-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">緯度-単純型</a></li>
+                           <li id="緯度経度書式-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E7%B7%AF%E5%BA%A6%E7%B5%8C%E5%BA%A6%E6%9B%B8%E5%BC%8F-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">緯度経度書式-単純型</a></li>
+                           <li id="自動認識id-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%87%AA%E5%8B%95%E8%AA%8D%E8%AD%98id-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">自動認識ID-単純型</a></li>
+                           <li id="色-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%89%B2-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">色-単純型</a></li>
+                           <li id="表記-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A1%A8%E8%A8%98-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">表記-単純型</a></li>
+                           <li id="表題-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A1%A8%E9%A1%8C-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">表題-単純型</a></li>
+                           <li id="製造者-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A3%BD%E9%80%A0%E8%80%85-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">製造者-単純型</a></li>
+                           <li id="要約-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A6%81%E7%B4%84-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">要約-単純型</a></li>
+                           <li id="規制情報-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A6%8F%E5%88%B6%E6%83%85%E5%A0%B1-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">規制情報-単純型</a></li>
+                           <li id="記録形式-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%98%E9%8C%B2%E5%BD%A2%E5%BC%8F-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">記録形式-単純型</a></li>
+                           <li id="設置位置-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%A8%AD%E7%BD%AE%E4%BD%8D%E7%BD%AE-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">設置位置-単純型</a></li>
+                           <li id="説明-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%AA%AC%E6%98%8E-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">説明-単純型</a></li>
+                           <li id="販売業者-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B2%A9%E5%A3%B2%E6%A5%AD%E8%80%85-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">販売業者-単純型</a></li>
+                           <li id="資源タイプ-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B3%87%E6%BA%90%E3%82%BF%E3%82%A4%E3%83%97-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">資源タイプ-単純型</a></li>
+                           <li id="路線-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E8%B7%AF%E7%B7%9A-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">路線-単純型</a></li>
+                           <li id="送付先-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%81%E4%BB%98%E5%85%88-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">送付先-単純型</a></li>
+                           <li id="通称-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%9A%E7%A7%B0-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">通称-単純型</a></li>
+                           <li id="通貨-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%80%9A%E8%B2%A8-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">通貨-単純型</a></li>
+                           <li id="部屋番号-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%83%A8%E5%B1%8B%E7%95%AA%E5%8F%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">部屋番号-単純型</a></li>
+                           <li id="郵便番号-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%83%B5%E4%BE%BF%E7%95%AA%E5%8F%B7-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">郵便番号-単純型</a></li>
+                           <li id="都道府県-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">都道府県-単純型</a></li>
+                           <li id="量種別-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%87%8F%E7%A8%AE%E5%88%A5-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">量種別-単純型</a></li>
+                           <li id="開催期日-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%82%AC%E6%9C%9F%E6%97%A5-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">開催期日-単純型</a></li>
+                           <li id="開始時間-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%96%8B%E5%A7%8B%E6%99%82%E9%96%93-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">開始時間-単純型</a></li>
+                           <li id="駐車場種別-単純型"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">ic</a>:
+                              <a href="%E9%A7%90%E8%BB%8A%E5%A0%B4%E7%A8%AE%E5%88%A5-%E5%8D%98%E7%B4%94%E5%9E%8B.html" target="ContentFrame">駐車場種別-単純型</a></li>
+                        </ul>
+                     </li>
+                     <li id="Namespace" class="parent"><a href="javascript:toggleNode('Namespace')"><img height="11" width="11" src="images/plus.gif"></img>Namespace</a><ul style="display:none" expanded="false" loaded="true">
+                           <li id="http___imi_go_jp_ns_core_2"><a href="http___imi_go_jp_ns_core_2.html" target="ContentFrame">http://imi.go.jp/ns/core/2</a></li>
+                           <li id="urn_un_unece_uncefact_codelist_standard_iso_iso3alphacurrencycode_2012-08-31"><a href="urn_un_unece_uncefact_codelist_standard_iso_iso3alphacurrencycode_2012-08-31.html" target="ContentFrame">urn:un:unece:uncefact:codelist:standard:ISO:ISO3AlphaCurrencyCode:2012-08-31</a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div id="tab2" class="tab_content"><input type="text" id="txtSearch"></input><input type="button" id="cmdSearch" value="Search" onclick="getSearchJS('txtSearch','ulSearch');"></input><div style="margin-top:10px;">
+                  <ul id="ulSearch" class="search"></ul>
+               </div>
+            </div>
+         </div>
+      </form>
+   </body>
+</html>

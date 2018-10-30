@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>Docs for schema item 製品個品型-固有要素グループ in IMI共通語彙基盤　コア語彙 バージョン2.4.1</title>
+      <!-- saved from url=(0014)about:internet -->
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('Group', '製品個品型-固有要素グループ');
+                        --></script><div class="pageheader">
+         Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.1
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>Group</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>製品個品型-固有要素グループ</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="http___imi_go_jp_ns_core_2.html">http://imi.go.jp/ns/core/2</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="core241_xsd.html">Core241.xsd</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="283,257,429,282" href="%E8%B3%BC%E5%85%A5%E4%BE%A1%E6%A0%BC.html" alt="Drilldown into 購入価格"></area>
+                     <area shape="rect" coords="283,225,425,250" href="%E6%89%80%E6%9C%89%E8%80%85.html" alt="Drilldown into 所有者"></area>
+                     <area shape="rect" coords="283,193,425,218" href="%E7%8A%B6%E6%85%8B.html" alt="Drilldown into 状態"></area>
+                     <area shape="rect" coords="285,161,443,186" href="%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E7%95%AA%E5%8F%B7.html" alt="Drilldown into シリアル番号"></area>
+                     <area shape="rect" coords="283,129,429,154" href="%E8%B3%9E%E5%91%B3%E6%9C%9F%E9%99%90.html" alt="Drilldown into 賞味期限"></area>
+                     <area shape="rect" coords="283,97,429,122" href="%E4%BD%BF%E7%94%A8%E6%9C%9F%E9%99%90.html" alt="Drilldown into 使用期限"></area>
+                     <area shape="rect" coords="283,65,429,90" href="%E6%B6%88%E8%B2%BB%E6%9C%9F%E9%99%90.html" alt="Drilldown into 消費期限"></area>
+                     <area shape="rect" coords="285,33,431,58" href="%E3%83%AD%E3%83%83%E3%83%88%E7%95%AA%E5%8F%B7.html" alt="Drilldown into ロット番号"></area>
+                     <area shape="rect" coords="283,1,425,26" href="%E8%A3%BD%E9%80%A0%E6%97%A5.html" alt="Drilldown into 製造日"></area></map><img src="images/%E8%A3%BD%E5%93%81%E5%80%8B%E5%93%81%E5%9E%8B-%E5%9B%BA%E6%9C%89%E8%A6%81%E7%B4%A0%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97.png" border="0" alt="XSD Diagram of 製品個品型-固有要素グループ" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xsd:group name="製品個品型-固有要素グループ"&gt;
+    &lt;xsd:sequence&gt;
+        &lt;xsd:element ref="ic:製造日" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="ic:ロット番号" minOccurs="0" maxOccurs="1" /&gt;
+        &lt;xsd:element ref="ic:消費期限" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="ic:使用期限" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="ic:賞味期限" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="ic:シリアル番号" minOccurs="0" maxOccurs="1" /&gt;
+        &lt;xsd:element ref="ic:状態" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="ic:所有者" minOccurs="0" maxOccurs="unbounded" /&gt;
+        &lt;xsd:element ref="ic:購入価格" minOccurs="0" maxOccurs="unbounded" /&gt;
+    &lt;/xsd:sequence&gt;
+&lt;/xsd:group&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">製造日</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E8%A3%BD%E9%80%A0%E6%97%A5.html">製造日</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">ロット番号</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E3%83%AD%E3%83%83%E3%83%88%E7%95%AA%E5%8F%B7.html">ロット番号</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">1</td>
+                     </tr>
+                     <tr>
+                        <td class="first">消費期限</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E6%B6%88%E8%B2%BB%E6%9C%9F%E9%99%90.html">消費期限</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">使用期限</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E4%BD%BF%E7%94%A8%E6%9C%9F%E9%99%90.html">使用期限</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">賞味期限</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E8%B3%9E%E5%91%B3%E6%9C%9F%E9%99%90.html">賞味期限</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">シリアル番号</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E3%82%B7%E3%83%AA%E3%82%A2%E3%83%AB%E7%95%AA%E5%8F%B7.html">シリアル番号</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">1</td>
+                     </tr>
+                     <tr>
+                        <td class="first">状態</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E7%8A%B6%E6%85%8B.html">状態</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">所有者</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E6%89%80%E6%9C%89%E8%80%85.html">所有者</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">購入価格</td>
+                        <td><a href="http___imi_go_jp_ns_core_2.html">ic</a>:<a href="%E8%B3%BC%E5%85%A5%E4%BE%A1%E6%A0%BC.html">購入価格</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.1<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2018 - Developer Bundle (Trial) 16.1.16.8712</a></div>
+   </body>
+</html>
