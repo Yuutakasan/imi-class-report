@@ -2,8 +2,12 @@
 IMI 共通語彙基盤
 
 Core241 Document
-- https://yuutakasan.github.io/imi-class-report/Core241/Core241.xsd.html#type_%E6%A6%82%E5%BF%B5%E5%9E%8B
-- https://yuutakasan.github.io/imi-class-report/Core241/ISO_ISO3AlphaCurrencyCode_2012-08-31.xsd.html
+- xs3p
+-- https://yuutakasan.github.io/imi-class-report/Core241/xs3p/Core241.xsd.html#type_%E6%A6%82%E5%BF%B5%E5%9E%8B
+-- https://yuutakasan.github.io/imi-class-report/Core241/xs3p/ISO_ISO3AlphaCurrencyCode_2012-08-31.xsd.html
+- liquid studio
+-- https://yuutakasan.github.io/imi-class-report/Core241/liquidstudio/index.html
+
 
 Core240 Document
 - https://yuutakasan.github.io/imi-class-report/Core240/Core240.xsd.html#type_%E6%A6%82%E5%BF%B5%E5%9E%8B
