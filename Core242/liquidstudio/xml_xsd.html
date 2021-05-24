@@ -1,0 +1,481 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>Docs the schema xml.xsd in IMI共通語彙基盤　コア語彙 バージョン2.4.2</title>
+      <!-- saved from url=(0014)about:internet -->
+      <link href="styles/site.css" rel="stylesheet" type="text/css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('Schema', 'xml_xsd');
+                        --></script><div class="pageheader">
+         Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Schema Name:</b></td>
+               <td>xml.xsd</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Target Namespace:</b></td>
+               <td><a href="http___www_w3_org_xml_1998_namespace.html">http://www.w3.org/XML/1998/namespace</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Documentation:</b></td>
+               <td><pre>About the XML namespace
+
+    
+     
+      This schema document describes the XML namespace, in a form
+      suitable for import by other schema documents.
+     
+     
+      See 
+      http://www.w3.org/XML/1998/namespace.html and
+      
+      http://www.w3.org/TR/REC-xml for information 
+      about this namespace.
+     
+     
+      Note that local names in this namespace are intended to be
+      defined only by the World Wide Web Consortium or its subgroups.
+      The names currently defined in this namespace are listed below.
+      They should not be used with conflicting semantics by any Working
+      Group, specification, or document instance.
+     
+        
+      See further below in this document for more information about how to refer to this schema document from your own
+      XSD schema documents and about the
+      namespace-versioning policy governing this schema document.</pre><pre>Father (in any context at all) 
+
+    
+     
+      denotes Jon Bosak, the chair of 
+      the original XML Working Group.  This name is reserved by 
+      the following decision of the W3C XML Plenary and 
+      XML Coordination groups:
+     
+     
+       
+	In appreciation for his vision, leadership and
+	dedication the W3C XML Plenary on this 10th day of
+	February, 2000, reserves for Jon Bosak in perpetuity
+	the XML name "xml:Father".</pre><pre>About this schema document
+
+    
+     
+      This schema defines attributes and an attribute group suitable
+      for use by schemas wishing to allow xml:base,
+      xml:lang, xml:space or
+      xml:id attributes on elements they define.
+     
+     
+      To enable this, such a schema must import this schema for
+      the XML namespace, e.g. as follows:
+     
+     
+          &lt;schema . . .&gt;
+           . . .
+           &lt;import namespace="http://www.w3.org/XML/1998/namespace"
+                      schemaLocation="http://www.w3.org/2001/xml.xsd"/&gt;
+     
+     
+      or
+     
+     
+           &lt;import namespace="http://www.w3.org/XML/1998/namespace"
+                      schemaLocation="http://www.w3.org/2009/01/xml.xsd"/&gt;
+     
+     
+      Subsequently, qualified reference to any of the attributes or the
+      group defined below will have the desired effect, e.g.
+     
+     
+          &lt;type . . .&gt;
+           . . .
+           &lt;attributeGroup ref="xml:specialAttrs"/&gt;
+     
+     
+      will define a type which will schema-validate an instance element
+      with any of those attributes.</pre><pre>Versioning policy for this schema document
+    
+     
+      In keeping with the XML Schema WG's standard versioning
+      policy, this schema document will persist at
+      
+       http://www.w3.org/2009/01/xml.xsd.
+     
+     
+      At the date of issue it can also be found at
+      
+       http://www.w3.org/2001/xml.xsd.
+     
+     
+      The schema document at that URI may however change in the future,
+      in order to remain compatible with the latest version of XML
+      Schema itself, or with the XML namespace itself.  In other words,
+      if the XML Schema or XML namespaces change, the version of this
+      document at 
+       http://www.w3.org/2001/xml.xsd 
+       
+      will change accordingly; the version at 
+      
+       http://www.w3.org/2009/01/xml.xsd 
+       
+      will not change.
+     
+     
+      Previous dated (and unchanging) versions of this schema 
+      document are at:
+     
+     
+      
+	http://www.w3.org/2009/01/xml.xsd
+      
+	http://www.w3.org/2007/08/xml.xsd
+      
+	http://www.w3.org/2004/10/xml.xsd
+      
+	http://www.w3.org/2001/03/xml.xsd</pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>
+&lt;?xml-stylesheet href="../2008/09/xsd.xsl" type="text/xsl"?&gt;
+&lt;xs:schema targetNamespace="http://www.w3.org/XML/1998/namespace" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns   ="http://www.w3.org/1999/xhtml"
+  xml:lang="en"&gt;
+
+ &lt;xs:annotation&gt;
+  &lt;xs:documentation&gt;
+   &lt;div&gt;
+    &lt;h1&gt;About the XML namespace&lt;/h1&gt;
+
+    &lt;div class="bodytext"&gt;
+     &lt;p&gt;
+      This schema document describes the XML namespace, in a form
+      suitable for import by other schema documents.
+     &lt;/p&gt;
+     &lt;p&gt;
+      See &lt;a href="http://www.w3.org/XML/1998/namespace.html"&gt;
+      http://www.w3.org/XML/1998/namespace.html&lt;/a&gt; and
+      &lt;a href="http://www.w3.org/TR/REC-xml"&gt;
+      http://www.w3.org/TR/REC-xml&lt;/a&gt; for information 
+      about this namespace.
+     &lt;/p&gt;
+     &lt;p&gt;
+      Note that local names in this namespace are intended to be
+      defined only by the World Wide Web Consortium or its subgroups.
+      The names currently defined in this namespace are listed below.
+      They should not be used with conflicting semantics by any Working
+      Group, specification, or document instance.
+     &lt;/p&gt;
+     &lt;p&gt;   
+      See further below in this document for more information about &lt;a
+      href="#usage"&gt;how to refer to this schema document from your own
+      XSD schema documents&lt;/a&gt; and about &lt;a href="#nsversioning"&gt;the
+      namespace-versioning policy governing this schema document&lt;/a&gt;.
+     &lt;/p&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/xs:documentation&gt;
+ &lt;/xs:annotation&gt;
+
+ &lt;xs:attribute name="lang"&gt;
+  &lt;xs:annotation&gt;
+   &lt;xs:documentation&gt;
+    &lt;div&gt;
+     
+      &lt;h3&gt;lang (as an attribute name)&lt;/h3&gt;
+      &lt;p&gt;
+       denotes an attribute whose value
+       is a language code for the natural language of the content of
+       any element; its value is inherited.  This name is reserved
+       by virtue of its definition in the XML specification.&lt;/p&gt;
+     
+    &lt;/div&gt;
+    &lt;div&gt;
+     &lt;h4&gt;Notes&lt;/h4&gt;
+     &lt;p&gt;
+      Attempting to install the relevant ISO 2- and 3-letter
+      codes as the enumerated possible values is probably never
+      going to be a realistic possibility.  
+     &lt;/p&gt;
+     &lt;p&gt;
+      See BCP 47 at &lt;a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt"&gt;
+       http://www.rfc-editor.org/rfc/bcp/bcp47.txt&lt;/a&gt;
+      and the IANA language subtag registry at
+      &lt;a href="http://www.iana.org/assignments/language-subtag-registry"&gt;
+       http://www.iana.org/assignments/language-subtag-registry&lt;/a&gt;
+      for further information.
+     &lt;/p&gt;
+     &lt;p&gt;
+      The union allows for the 'un-declaration' of xml:lang with
+      the empty string.
+     &lt;/p&gt;
+    &lt;/div&gt;
+   &lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+   &lt;xs:union memberTypes="xs:language"&gt;
+    &lt;xs:simpleType&gt;    
+     &lt;xs:restriction base="xs:string"&gt;
+      &lt;xs:enumeration value=""/&gt;
+     &lt;/xs:restriction&gt;
+    &lt;/xs:simpleType&gt;
+   &lt;/xs:union&gt;
+  &lt;/xs:simpleType&gt;
+ &lt;/xs:attribute&gt;
+
+ &lt;xs:attribute name="space"&gt;
+  &lt;xs:annotation&gt;
+   &lt;xs:documentation&gt;
+    &lt;div&gt;
+     
+      &lt;h3&gt;space (as an attribute name)&lt;/h3&gt;
+      &lt;p&gt;
+       denotes an attribute whose
+       value is a keyword indicating what whitespace processing
+       discipline is intended for the content of the element; its
+       value is inherited.  This name is reserved by virtue of its
+       definition in the XML specification.&lt;/p&gt;
+     
+    &lt;/div&gt;
+   &lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+  &lt;xs:simpleType&gt;
+   &lt;xs:restriction base="xs:NCName"&gt;
+    &lt;xs:enumeration value="default"/&gt;
+    &lt;xs:enumeration value="preserve"/&gt;
+   &lt;/xs:restriction&gt;
+  &lt;/xs:simpleType&gt;
+ &lt;/xs:attribute&gt;
+ 
+ &lt;xs:attribute name="base" type="xs:anyURI"&gt; &lt;xs:annotation&gt;
+   &lt;xs:documentation&gt;
+    &lt;div&gt;
+     
+      &lt;h3&gt;base (as an attribute name)&lt;/h3&gt;
+      &lt;p&gt;
+       denotes an attribute whose value
+       provides a URI to be used as the base for interpreting any
+       relative URIs in the scope of the element on which it
+       appears; its value is inherited.  This name is reserved
+       by virtue of its definition in the XML Base specification.&lt;/p&gt;
+     
+     &lt;p&gt;
+      See &lt;a
+      href="http://www.w3.org/TR/xmlbase/"&gt;http://www.w3.org/TR/xmlbase/&lt;/a&gt;
+      for information about this attribute.
+     &lt;/p&gt;
+    &lt;/div&gt;
+   &lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+ &lt;/xs:attribute&gt;
+ 
+ &lt;xs:attribute name="id" type="xs:ID"&gt;
+  &lt;xs:annotation&gt;
+   &lt;xs:documentation&gt;
+    &lt;div&gt;
+     
+      &lt;h3&gt;id (as an attribute name)&lt;/h3&gt; 
+      &lt;p&gt;
+       denotes an attribute whose value
+       should be interpreted as if declared to be of type ID.
+       This name is reserved by virtue of its definition in the
+       xml:id specification.&lt;/p&gt;
+     
+     &lt;p&gt;
+      See &lt;a
+      href="http://www.w3.org/TR/xml-id/"&gt;http://www.w3.org/TR/xml-id/&lt;/a&gt;
+      for information about this attribute.
+     &lt;/p&gt;
+    &lt;/div&gt;
+   &lt;/xs:documentation&gt;
+  &lt;/xs:annotation&gt;
+ &lt;/xs:attribute&gt;
+
+ &lt;xs:attributeGroup name="specialAttrs"&gt;
+  &lt;xs:attribute ref="xml:base"/&gt;
+  &lt;xs:attribute ref="xml:lang"/&gt;
+  &lt;xs:attribute ref="xml:space"/&gt;
+  &lt;xs:attribute ref="xml:id"/&gt;
+ &lt;/xs:attributeGroup&gt;
+
+ &lt;xs:annotation&gt;
+  &lt;xs:documentation&gt;
+   &lt;div&gt;
+   
+    &lt;h3&gt;Father (in any context at all)&lt;/h3&gt; 
+
+    &lt;div class="bodytext"&gt;
+     &lt;p&gt;
+      denotes Jon Bosak, the chair of 
+      the original XML Working Group.  This name is reserved by 
+      the following decision of the W3C XML Plenary and 
+      XML Coordination groups:
+     &lt;/p&gt;
+     &lt;blockquote&gt;
+       &lt;p&gt;
+	In appreciation for his vision, leadership and
+	dedication the W3C XML Plenary on this 10th day of
+	February, 2000, reserves for Jon Bosak in perpetuity
+	the XML name "xml:Father".
+       &lt;/p&gt;
+     &lt;/blockquote&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/xs:documentation&gt;
+ &lt;/xs:annotation&gt;
+
+ &lt;xs:annotation&gt;
+  &lt;xs:documentation&gt;
+   &lt;div xml:id="usage" id="usage"&gt;
+    &lt;h2&gt;&lt;a name="usage"&gt;About this schema document&lt;/a&gt;&lt;/h2&gt;
+
+    &lt;div class="bodytext"&gt;
+     &lt;p&gt;
+      This schema defines attributes and an attribute group suitable
+      for use by schemas wishing to allow &lt;code&gt;xml:base&lt;/code&gt;,
+      &lt;code&gt;xml:lang&lt;/code&gt;, &lt;code&gt;xml:space&lt;/code&gt; or
+      &lt;code&gt;xml:id&lt;/code&gt; attributes on elements they define.
+     &lt;/p&gt;
+     &lt;p&gt;
+      To enable this, such a schema must import this schema for
+      the XML namespace, e.g. as follows:
+     &lt;/p&gt;
+     &lt;pre&gt;
+          &amp;lt;schema . . .&gt;
+           . . .
+           &amp;lt;import namespace="http://www.w3.org/XML/1998/namespace"
+                      schemaLocation="http://www.w3.org/2001/xml.xsd"/&gt;
+     &lt;/pre&gt;
+     &lt;p&gt;
+      or
+     &lt;/p&gt;
+     &lt;pre&gt;
+           &amp;lt;import namespace="http://www.w3.org/XML/1998/namespace"
+                      schemaLocation="http://www.w3.org/2009/01/xml.xsd"/&gt;
+     &lt;/pre&gt;
+     &lt;p&gt;
+      Subsequently, qualified reference to any of the attributes or the
+      group defined below will have the desired effect, e.g.
+     &lt;/p&gt;
+     &lt;pre&gt;
+          &amp;lt;type . . .&gt;
+           . . .
+           &amp;lt;attributeGroup ref="xml:specialAttrs"/&gt;
+     &lt;/pre&gt;
+     &lt;p&gt;
+      will define a type which will schema-validate an instance element
+      with any of those attributes.
+     &lt;/p&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/xs:documentation&gt;
+ &lt;/xs:annotation&gt;
+
+ &lt;xs:annotation&gt;
+  &lt;xs:documentation&gt;
+   &lt;div id="nsversioning" xml:id="nsversioning"&gt;
+    &lt;h2&gt;&lt;a name="nsversioning"&gt;Versioning policy for this schema document&lt;/a&gt;&lt;/h2&gt;
+    &lt;div class="bodytext"&gt;
+     &lt;p&gt;
+      In keeping with the XML Schema WG's standard versioning
+      policy, this schema document will persist at
+      &lt;a href="http://www.w3.org/2009/01/xml.xsd"&gt;
+       http://www.w3.org/2009/01/xml.xsd&lt;/a&gt;.
+     &lt;/p&gt;
+     &lt;p&gt;
+      At the date of issue it can also be found at
+      &lt;a href="http://www.w3.org/2001/xml.xsd"&gt;
+       http://www.w3.org/2001/xml.xsd&lt;/a&gt;.
+     &lt;/p&gt;
+     &lt;p&gt;
+      The schema document at that URI may however change in the future,
+      in order to remain compatible with the latest version of XML
+      Schema itself, or with the XML namespace itself.  In other words,
+      if the XML Schema or XML namespaces change, the version of this
+      document at &lt;a href="http://www.w3.org/2001/xml.xsd"&gt;
+       http://www.w3.org/2001/xml.xsd 
+      &lt;/a&gt; 
+      will change accordingly; the version at 
+      &lt;a href="http://www.w3.org/2009/01/xml.xsd"&gt;
+       http://www.w3.org/2009/01/xml.xsd 
+      &lt;/a&gt; 
+      will not change.
+     &lt;/p&gt;
+     &lt;p&gt;
+      Previous dated (and unchanging) versions of this schema 
+      document are at:
+     &lt;/p&gt;
+     &lt;ul&gt;
+      &lt;li&gt;&lt;a href="http://www.w3.org/2009/01/xml.xsd"&gt;
+	http://www.w3.org/2009/01/xml.xsd&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.w3.org/2007/08/xml.xsd"&gt;
+	http://www.w3.org/2007/08/xml.xsd&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.w3.org/2004/10/xml.xsd"&gt;
+	http://www.w3.org/2004/10/xml.xsd&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="http://www.w3.org/2001/03/xml.xsd"&gt;
+	http://www.w3.org/2001/03/xml.xsd&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+    &lt;/div&gt;
+   &lt;/div&gt;
+  &lt;/xs:documentation&gt;
+ &lt;/xs:annotation&gt;
+
+&lt;/xs:schema&gt;
+
+</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="Attribute" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Attributes:</b></td>
+            </tr>
+            <tr id="Attribute_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="base.html">base</a></li>
+                     <li><a href="id3.html">id</a></li>
+                     <li><a href="lang.html">lang</a></li>
+                     <li><a href="space.html">space</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="AttributeGroup" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>AttributeGroups:</b></td>
+            </tr>
+            <tr id="AttributeGroup_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul>
+                     <li><a href="specialattrs.html">specialAttrs</a></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/">Liquid Studio 2021 - Developer Bundle (Trial) 19.0.9.10834</a></div>
+   </body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>Docs for schema item complexRestrictionType in IMI共通語彙基盤　コア語彙 バージョン2.4.2</title>
+      <!-- saved from url=(0014)about:internet -->
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('ComplexType', 'complexrestrictiontype');
+                        --></script><div class="pageheader">
+         Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>complexRestrictionType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">http://www.w3.org/2001/XMLSchema</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Type:</b></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="restrictiontype.html">restrictionType</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="xmlschema_xsd.html">XMLSchema.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="426,454,588,479" href="anyattribute.html" alt="Drilldown into anyAttribute"></area>
+                     <area shape="rect" coords="469,420,695,445" href="attributegroup2.html" alt="Drilldown into attributeGroup"></area>
+                     <area shape="rect" coords="469,388,611,413" href="attribute2.html" alt="Drilldown into attribute"></area>
+                     <area shape="rect" coords="341,363,709,492" href="attrdecls.html" alt="Drilldown into attrDecls"></area>
+                     <area shape="rect" coords="549,327,772,352" href="simplerestrictionmodel.html" alt="Drilldown into simpleRestrictionModel"></area>
+                     <area shape="rect" coords="614,281,762,306" href="sequence1.html" alt="Drilldown into sequence"></area>
+                     <area shape="rect" coords="614,249,756,274" href="choice1.html" alt="Drilldown into choice"></area>
+                     <area shape="rect" coords="614,217,756,242" href="all2.html" alt="Drilldown into all"></area>
+                     <area shape="rect" coords="614,185,760,210" href="group4.html" alt="Drilldown into group"></area>
+                     <area shape="rect" coords="549,160,775,318" href="typedefparticle.html" alt="Drilldown into typeDefParticle"></area>
+                     <area shape="rect" coords="361,127,515,152" href="annotation.html" alt="Drilldown into annotation"></area>
+                     <area shape="rect" coords="296,33,438,58" href="id4.html" alt="Drilldown into id"></area>
+                     <area shape="rect" coords="296,1,438,26" href="base2.html" alt="Drilldown into base"></area></map><img src="images/complexrestrictiontype.png" border="0" alt="XSD Diagram of complexRestrictionType" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xs:complexType name="complexRestrictionType"&gt;
+    &lt;xs:complexContent&gt;
+        &lt;xs:restriction base="xs:restrictionType"&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element ref="xs:annotation" minOccurs="0" /&gt;
+                &lt;xs:choice minOccurs="0"&gt;
+                    &lt;xs:annotation&gt;
+                        &lt;xs:documentation&gt;This choice is added simply to
+                   make this a valid restriction per the REC&lt;/xs:documentation&gt;
+                    &lt;/xs:annotation&gt;
+                    &lt;xs:group ref="xs:typeDefParticle" /&gt;
+                &lt;/xs:choice&gt;
+                &lt;xs:group ref="xs:attrDecls" /&gt;
+            &lt;/xs:sequence&gt;
+            &lt;xs:anyAttribute namespace="##other" processContents="lax" /&gt;
+        &lt;/xs:restriction&gt;
+    &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">annotation</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotation.html">annotation</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">group</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="group4.html">group</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">all</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="all2.html">all</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">choice</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="choice1.html">choice</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">sequence</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="sequence1.html">sequence</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">simpleType</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="simpletype10.html">simpleType</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">minExclusive</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="minexclusive.html">minExclusive</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">minInclusive</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="mininclusive.html">minInclusive</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">maxExclusive</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxexclusive.html">maxExclusive</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">maxInclusive</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxinclusive.html">maxInclusive</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">totalDigits</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="totaldigits.html">totalDigits</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">fractionDigits</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="fractiondigits.html">fractionDigits</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">length</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="length.html">length</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">minLength</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="minlength.html">minLength</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">maxLength</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxlength.html">maxLength</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">enumeration</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="enumeration.html">enumeration</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">whiteSpace</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="whitespace.html">whiteSpace</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">pattern</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="pattern.html">pattern</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">attribute</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="attribute2.html">attribute</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">attributeGroup</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="attributegroup2.html">attributeGroup</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">anyAttribute</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="anyattribute.html">anyAttribute</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">annotation</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotation.html">annotation</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="typedefparticle.html">typeDefParticle</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="simplerestrictionmodel.html">simpleRestrictionModel</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="facets.html">facets</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="attrdecls.html">attrDecls</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="typedefparticle.html">typeDefParticle</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="attrdecls.html">attrDecls</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childAttributes" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Attributes:</b></td>
+            </tr>
+            <tr id="childAttributes_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Default Value</td>
+                        <td class="last">Use</td>
+                     </tr>
+                     <tr>
+                        <td class="first">id</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="id4.html">id</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">base</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="base2.html">base</a></td>
+                        <td class="mid"></td>
+                        <td class="last">Required</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last"></td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last">Allowed namespace: '##other'</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last">Allowed namespace: '##other'</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="openattrs.html">openAttrs</a><ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotated.html">annotated</a><ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="restrictiontype.html">restrictionType</a><ul>
+                     <li><b><i>complexRestrictionType</i></b></li>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="restriction.html">restriction</a></li>
+                     </ul></ul></li></ul></li></ul></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="restriction.html">restriction</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2021 - Developer Bundle (Trial) 19.0.9.10834</a></div>
+   </body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>Docs for schema item topLevelElement in IMI共通語彙基盤　コア語彙 バージョン2.4.2</title>
+      <!-- saved from url=(0014)about:internet -->
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('ComplexType', 'toplevelelement');
+                        --></script><div class="pageheader">
+         Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>topLevelElement</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">http://www.w3.org/2001/XMLSchema</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Type:</b></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="element.html">element</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="xmlschema_xsd.html">XMLSchema.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="349,699,491,724" href="keyref.html" alt="Drilldown into keyref"></area>
+                     <area shape="rect" coords="349,667,491,692" href="key.html" alt="Drilldown into key"></area>
+                     <area shape="rect" coords="349,635,491,660" href="unique.html" alt="Drilldown into unique"></area>
+                     <area shape="rect" coords="284,610,504,736" href="identityconstraint.html" alt="Drilldown into identityConstraint"></area>
+                     <area shape="rect" coords="329,575,551,600" href="complextype4.html" alt="Drilldown into complexType"></area>
+                     <area shape="rect" coords="329,543,530,568" href="simpletype6.html" alt="Drilldown into simpleType"></area>
+                     <area shape="rect" coords="284,511,438,536" href="annotation.html" alt="Drilldown into annotation"></area>
+                     <area shape="rect" coords="219,417,361,442" href="id4.html" alt="Drilldown into id"></area>
+                     <area shape="rect" coords="219,385,361,410" href="form3.html" alt="Drilldown into form"></area>
+                     <area shape="rect" coords="219,353,362,378" href="block1.html" alt="Drilldown into block"></area>
+                     <area shape="rect" coords="219,321,386,346" href="final1.html" alt="Drilldown into final"></area>
+                     <area shape="rect" coords="219,289,361,314" href="abstract1.html" alt="Drilldown into abstract"></area>
+                     <area shape="rect" coords="219,257,361,282" href="nillable.html" alt="Drilldown into nillable"></area>
+                     <area shape="rect" coords="219,225,361,250" href="fixed1.html" alt="Drilldown into fixed"></area>
+                     <area shape="rect" coords="219,193,361,218" href="default2.html" alt="Drilldown into default"></area>
+                     <area shape="rect" coords="219,161,376,186" href="maxoccurs6.html" alt="Drilldown into maxOccurs"></area>
+                     <area shape="rect" coords="219,129,374,154" href="minoccurs6.html" alt="Drilldown into minOccurs"></area>
+                     <area shape="rect" coords="219,97,413,122" href="substitutiongroup.html" alt="Drilldown into substitutionGroup"></area>
+                     <area shape="rect" coords="219,65,361,90" href="type1.html" alt="Drilldown into type"></area>
+                     <area shape="rect" coords="219,33,361,58" href="ref9.html" alt="Drilldown into ref"></area>
+                     <area shape="rect" coords="219,1,362,26" href="name13.html" alt="Drilldown into name"></area></map><img src="images/toplevelelement.png" border="0" alt="XSD Diagram of topLevelElement" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xs:complexType name="topLevelElement"&gt;
+    &lt;xs:complexContent&gt;
+        &lt;xs:restriction base="xs:element"&gt;
+            &lt;xs:sequence&gt;
+                &lt;xs:element ref="xs:annotation" minOccurs="0" /&gt;
+                &lt;xs:choice minOccurs="0"&gt;
+                    &lt;xs:element name="simpleType" type="xs:localSimpleType" /&gt;
+                    &lt;xs:element name="complexType" type="xs:localComplexType" /&gt;
+                &lt;/xs:choice&gt;
+                &lt;xs:group ref="xs:identityConstraint" minOccurs="0" maxOccurs="unbounded" /&gt;
+            &lt;/xs:sequence&gt;
+            &lt;xs:attribute name="ref" use="prohibited" /&gt;
+            &lt;xs:attribute name="form" use="prohibited" /&gt;
+            &lt;xs:attribute name="minOccurs" use="prohibited" /&gt;
+            &lt;xs:attribute name="maxOccurs" use="prohibited" /&gt;
+            &lt;xs:attribute name="name" use="required" type="xs:NCName" /&gt;
+            &lt;xs:anyAttribute namespace="##other" processContents="lax" /&gt;
+        &lt;/xs:restriction&gt;
+    &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">annotation</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotation.html">annotation</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">simpleType</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="simpletype1.html">simpleType</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">complexType</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="complextype1.html">complexType</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">unique</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="unique.html">unique</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">key</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="key.html">key</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">keyref</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="keyref.html">keyref</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">annotation</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotation.html">annotation</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">simpleType</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="simpletype6.html">simpleType</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">complexType</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="complextype4.html">complexType</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="identityconstraint.html">identityConstraint</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="identityconstraint.html">identityConstraint</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">unbounded</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childAttributes" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Attributes:</b></td>
+            </tr>
+            <tr id="childAttributes_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Default Value</td>
+                        <td class="last">Use</td>
+                     </tr>
+                     <tr>
+                        <td class="first">id</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="id4.html">id</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">type</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="type1.html">type</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">substitutionGroup</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="substitutiongroup.html">substitutionGroup</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">default</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="default2.html">default</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">fixed</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="fixed1.html">fixed</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">nillable</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="nillable.html">nillable</a></td>
+                        <td class="mid">false</td>
+                        <td class="last">Optional</td>
+                     </tr>
+                     <tr>
+                        <td class="first">abstract</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="abstract1.html">abstract</a></td>
+                        <td class="mid">false</td>
+                        <td class="last">Optional</td>
+                     </tr>
+                     <tr>
+                        <td class="first">final</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="final1.html">final</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">block</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="block1.html">block</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">ref</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="ref9.html">ref</a></td>
+                        <td class="mid"></td>
+                        <td class="last">Prohibited</td>
+                     </tr>
+                     <tr>
+                        <td class="first">form</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="form3.html">form</a></td>
+                        <td class="mid"></td>
+                        <td class="last">Prohibited</td>
+                     </tr>
+                     <tr>
+                        <td class="first">minOccurs</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="minoccurs6.html">minOccurs</a></td>
+                        <td class="mid"></td>
+                        <td class="last">Prohibited</td>
+                     </tr>
+                     <tr>
+                        <td class="first">maxOccurs</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxoccurs6.html">maxOccurs</a></td>
+                        <td class="mid"></td>
+                        <td class="last">Prohibited</td>
+                     </tr>
+                     <tr>
+                        <td class="first">name</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="name13.html">name</a></td>
+                        <td class="mid"></td>
+                        <td class="last">Required</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last"></td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last">Allowed namespace: '##other'</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last">Allowed namespace: '##other'</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="openattrs.html">openAttrs</a><ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotated.html">annotated</a><ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="element.html">element</a><ul>
+                     <li><b><i>topLevelElement</i></b></li>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="element1.html">element</a></li>
+                     </ul></ul></li></ul></li></ul></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="element1.html">element</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2021 - Developer Bundle (Trial) 19.0.9.10834</a></div>
+   </body>
+</html>

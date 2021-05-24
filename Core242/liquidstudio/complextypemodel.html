@@ -1,0 +1,177 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>Docs for schema item complexTypeModel in IMI共通語彙基盤　コア語彙 バージョン2.4.2</title>
+      <!-- saved from url=(0014)about:internet -->
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('Group', 'complextypemodel');
+                        --></script><div class="pageheader">
+         Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>Group</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>complexTypeModel</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">http://www.w3.org/2001/XMLSchema</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="xmlschema_xsd.html">XMLSchema.xsd</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="455,324,617,349" href="anyattribute.html" alt="Drilldown into anyAttribute"></area>
+                     <area shape="rect" coords="498,290,724,315" href="attributegroup2.html" alt="Drilldown into attributeGroup"></area>
+                     <area shape="rect" coords="498,258,640,283" href="attribute2.html" alt="Drilldown into attribute"></area>
+                     <area shape="rect" coords="370,233,738,362" href="attrdecls.html" alt="Drilldown into attrDecls"></area>
+                     <area shape="rect" coords="457,187,605,212" href="sequence1.html" alt="Drilldown into sequence"></area>
+                     <area shape="rect" coords="457,155,599,180" href="choice1.html" alt="Drilldown into choice"></area>
+                     <area shape="rect" coords="457,123,599,148" href="all2.html" alt="Drilldown into all"></area>
+                     <area shape="rect" coords="457,91,603,116" href="group4.html" alt="Drilldown into group"></area>
+                     <area shape="rect" coords="392,66,618,224" href="typedefparticle.html" alt="Drilldown into typeDefParticle"></area>
+                     <area shape="rect" coords="214,33,398,58" href="complexcontent.html" alt="Drilldown into complexContent"></area>
+                     <area shape="rect" coords="214,1,388,26" href="simplecontent.html" alt="Drilldown into simpleContent"></area></map><img src="images/complextypemodel.png" border="0" alt="XSD Diagram of complexTypeModel" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xs:group name="complexTypeModel"&gt;
+    &lt;xs:choice&gt;
+        &lt;xs:element ref="xs:simpleContent" /&gt;
+        &lt;xs:element ref="xs:complexContent" /&gt;
+        &lt;xs:sequence&gt;
+            &lt;xs:annotation&gt;
+                &lt;xs:documentation&gt;
+   This branch is short for
+   &amp;lt;complexContent&amp;gt;
+   &amp;lt;restriction base="xs:anyType"&amp;gt;
+   ...
+   &amp;lt;/restriction&amp;gt;
+   &amp;lt;/complexContent&amp;gt;&lt;/xs:documentation&gt;
+            &lt;/xs:annotation&gt;
+            &lt;xs:group ref="xs:typeDefParticle" minOccurs="0" /&gt;
+            &lt;xs:group ref="xs:attrDecls" /&gt;
+        &lt;/xs:sequence&gt;
+    &lt;/xs:choice&gt;
+&lt;/xs:group&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">simpleContent</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="simplecontent.html">simpleContent</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">complexContent</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="complexcontent.html">complexContent</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">group</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="group4.html">group</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">all</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="all2.html">all</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">choice</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="choice1.html">choice</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">sequence</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="sequence1.html">sequence</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">attribute</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="attribute2.html">attribute</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">attributeGroup</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="attributegroup2.html">attributeGroup</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">anyAttribute</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="anyattribute.html">anyAttribute</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="typedefparticle.html">typeDefParticle</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;xs:group&gt;</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="attrdecls.html">attrDecls</a></td>
+                        <td class="mid">(1)</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2021 - Developer Bundle (Trial) 19.0.9.10834</a></div>
+   </body>
+</html>

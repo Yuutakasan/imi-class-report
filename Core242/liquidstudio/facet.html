@@ -1,0 +1,223 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+      <title>Docs for schema item facet in IMI共通語彙基盤　コア語彙 バージョン2.4.2</title>
+      <!-- saved from url=(0014)about:internet -->
+      <link rel="stylesheet" type="text/css" href="styles/site.css"></link><script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script><script type="text/javascript" src="scripts/highlight.pack.js"></script><script type="text/javascript" src="scripts/xmlstudio.js"></script><script type="text/javascript" src="scripts/jquery.cookie.js"></script></head>
+   <body style="margin:10px"><script type="text/javascript">
+         <!--
+                            EnsureInFrame('ComplexType', 'facet');
+                        --></script><div class="pageheader">
+         Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2
+      </div>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" width="120px;"><b>Definition Type:</b></td>
+               <td>ComplexType</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Name:</b></td>
+               <td>facet</td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Namespace:</b></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">http://www.w3.org/2001/XMLSchema</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Type:</b></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotated.html">annotated</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Containing Schema:</b></td>
+               <td><a href="xmlschema_xsd.html">XMLSchema.xsd</a></td>
+            </tr>
+            <tr>
+               <td class="label" width="120px;"><b>Abstract</b></td>
+               <td></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdDiagram" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Diagram:</b> 
+               </td>
+            </tr>
+            <tr id="xsdDiagram_body_id">
+               <td><map name="DiagramMap" id="DiagramMap">
+                     <area shape="rect" coords="268,312,422,337" href="annotation.html" alt="Drilldown into annotation"></area>
+                     <area shape="rect" coords="203,143,410,306" href="openattrs.html" alt="Drilldown into openAttrs"></area>
+                     <area shape="rect" coords="203,110,345,135" href="id4.html" alt="Drilldown into id"></area>
+                     <area shape="rect" coords="183,85,435,377" href="annotated.html" alt="Drilldown into annotated"></area>
+                     <area shape="rect" coords="183,33,325,77" href="fixed2.html" alt="Drilldown into fixed"></area>
+                     <area shape="rect" coords="183,1,325,26" href="value.html" alt="Drilldown into value"></area></map><img src="images/facet.png" border="0" alt="XSD Diagram of facet" usemap="#DiagramMap"></img></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label"><img id="xsdCode" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>XSD Schema Code:</b> 
+               </td>
+            </tr>
+            <tr id="xsdCode_body_id">
+               <td><pre><code>&lt;xs:complexType name="facet"&gt;
+    &lt;xs:complexContent&gt;
+        &lt;xs:extension base="xs:annotated"&gt;
+            &lt;xs:attribute name="value" use="required" /&gt;
+            &lt;xs:attribute name="fixed" type="xs:boolean" use="optional" default="false" /&gt;
+        &lt;/xs:extension&gt;
+    &lt;/xs:complexContent&gt;
+&lt;/xs:complexType&gt;</code></pre></td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childElements" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Elements:</b></td>
+            </tr>
+            <tr id="childElements_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Min Occurs</td>
+                        <td class="last">Max Occurs</td>
+                     </tr>
+                     <tr>
+                        <td class="first">annotation</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotation.html">annotation</a></td>
+                        <td class="mid">0</td>
+                        <td class="last">(1)</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="childAttributes" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Child Attributes:</b></td>
+            </tr>
+            <tr id="childAttributes_body_id">
+               <td width="120px;"></td>
+               <td class="childTableHolder">
+                  <table class="childTable">
+                     <tr class="header">
+                        <td class="label first">Name</td>
+                        <td>Type</td>
+                        <td class="mid">Default Value</td>
+                        <td class="last">Use</td>
+                     </tr>
+                     <tr>
+                        <td class="first">id</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="id4.html">id</a></td>
+                        <td class="mid"></td>
+                        <td class="last">(Optional)</td>
+                     </tr>
+                     <tr>
+                        <td class="first">value</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="value.html">value</a></td>
+                        <td class="mid"></td>
+                        <td class="last">Required</td>
+                     </tr>
+                     <tr>
+                        <td class="first">fixed</td>
+                        <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="fixed2.html">fixed</a></td>
+                        <td class="mid">false</td>
+                        <td class="last">Optional</td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last"></td>
+                     </tr>
+                     <tr>
+                        <td class="first">&lt;anyAttribute&gt;</td>
+                        <td colspan="3" class="last">Allowed namespace: '##other'</td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="derivationTree" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>Derivation Tree:</b></td>
+            </tr>
+            <tr id="derivationTree_body_id">
+               <td width="120px;"></td>
+               <td>
+                  <ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="openattrs.html">openAttrs</a><ul><li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="annotated.html">annotated</a><ul>
+                     <li><b><i>facet</i></b></li>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="nofixedfacet.html">noFixedFacet</a></li>
+                        <ul>
+                           <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="enumeration.html">enumeration</a></li>
+                        </ul>
+                        <ul>
+                           <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="pattern.html">pattern</a></li>
+                        </ul>
+                     </ul>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="numfacet.html">numFacet</a></li>
+                        <ul>
+                           <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="fractiondigits.html">fractionDigits</a></li>
+                        </ul>
+                        <ul>
+                           <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="length.html">length</a></li>
+                        </ul>
+                        <ul>
+                           <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxlength.html">maxLength</a></li>
+                        </ul>
+                        <ul>
+                           <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="minlength.html">minLength</a></li>
+                        </ul>
+                        <ul>
+                           <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="totaldigits.html">totalDigits</a></li>
+                        </ul>
+                     </ul>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxexclusive.html">maxExclusive</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxinclusive.html">maxInclusive</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="minexclusive.html">minExclusive</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="mininclusive.html">minInclusive</a></li>
+                     </ul>
+                     <ul>
+                        <li><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="whitespace.html">whiteSpace</a></li>
+                     </ul></ul></li></ul></li>
+                  </ul>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" class="mainHelp2">
+         <tbody>
+            <tr>
+               <td class="label" colspan="2"><img id="references" class="expand" height="11" width="11" src="images/minus.gif" alt="Collapse"></img> <b>References:</b></td>
+            </tr>
+            <tr id="references_body_id">
+               <td width="120px;"></td>
+               <td><a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxexclusive.html">maxExclusive</a>, <a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="maxinclusive.html">maxInclusive</a>, <a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="minexclusive.html">minExclusive</a>, <a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="mininclusive.html">minInclusive</a>, <a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="nofixedfacet.html">noFixedFacet</a>, <a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="numfacet.html">numFacet</a>, <a href="http___www_w3_org_2001_xmlschema.html">xsd</a>:<a href="whitespace.html">whiteSpace</a></td>
+            </tr>
+         </tbody>
+      </table>
+      <div class="pagefooter">
+         			Documentation for IMI共通語彙基盤　コア語彙 バージョン2.4.2<br/>
+         Generated using 
+         <a href="https://www.liquid-technologies.com/" rel="nofollow">Liquid Studio 2021 - Developer Bundle (Trial) 19.0.9.10834</a></div>
+   </body>
+</html>
